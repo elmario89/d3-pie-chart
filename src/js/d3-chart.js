@@ -2,6 +2,18 @@ $(function() {
 
     var svg = d3.select("#currency-pie-chart").append("svg").append("g");
 
+    var fetchData = new Promise(function(resolve, reject) {
+        d3.csv("/data/data.csv", type, function(error, data) {
+            if (error) reject(error);
+            resolve(data);
+        });
+
+        function type(d) {
+            d.population = +d.population;
+            return d;
+        }
+    });
+
     var drawPie = function(resizedWidth, resizedHeight){
         var width = resizedWidth,
             height = resizedHeight,
@@ -44,9 +56,7 @@ $(function() {
             .select("g")
             .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
-        d3.csv("/data/data.csv", type, function(error, data) {
-            if (error) throw error;
-
+        fetchData.then(function(data) {
             var g = svg.selectAll(".arc")
                 .data(pie(data))
                 .enter().append("g")
@@ -63,7 +73,6 @@ $(function() {
                 .attr("dy", ".35em")
                 .text(function(d) { return d.data.age; });
         });
-
 
         function type(d) {
             d.population = +d.population;
