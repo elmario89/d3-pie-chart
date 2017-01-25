@@ -1,0 +1,24 @@
+extends /_includes/layout.jade
+
+block title
+    title DSX
+    meta(name="description", content="")
+
+    - LOGIN = true;
+
+block content
+    .dsx-wrap-outer
+        .dsx-wrap
+            .dsx-wrap-inner.-tertiary
+                .dsx-login.-secondary
+                    .dsx-login-header.-secondary
+                        .dsx-login-header-title
+                            h1 Done
+                        .dsx-login-header-done-message.visible-xs-inline-block We sent you email with link to restore your password
+
+                        .dsx-login-header-done-message.hidden-xs We sent you email with link to restore
+                            br
+                            | your password
+
+                        .dsx-login-header-icon
+                            +svgsprite("check")

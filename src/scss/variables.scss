@@ -1,0 +1,49 @@
+/* Main Colors */
+$color-base: #fff;
+$color-primary: #4328B7;
+$color-secondary: #1F2440;
+$color-tertiary: #FAFAFA;
+
+$color-fill: #F8F8F8;
+$color-smooth: #9B9B9B;
+$color-muted: #C9C8C8;
+$color-disabled: #E9E9EA;
+
+$color-error: #EB4242;
+$color-info: blue;
+$color-success: #51C67D;
+$color-warning: #FF9F4D;
+$color-warning-secondary: #DA404E;
+$color-danger: $color-error;
+
+$color-bg: linear-gradient(240deg, #6fb8fc 0%,#3908a7 100%);
+$color-text: #000;
+$color-link: #4328B7;
+$color-link-hover: #4A40C2;
+
+$color-black: #000000;
+
+/* Fonts */
+$font-family: "Roboto", sans-serif;
+$font-family-secondary: "Butler", serif;
+$font-family-tertiary: "sf-ui", sans-serif;
+$font-size: 14px;
+$font-weight: 400;
+$letter-spacing: 0.5px;
+$line-height: 1;
+
+/* Screen sizes */
+$screen-xs: 320px;
+$screen-sm: 768px;
+$screen-md: 1024px;
+$screen-lg: 1366px;
+$screen-xl: 1600px;
+
+$screen-xl-min: $screen-xl;
+$screen-lg-max: ($screen-xl-min - 1);
+
+/* Paths */
+$path-assets: "./src/assets/";
+$path-assets-relative: "../";
+$path-bower: "./bower_components/";
+$path-bower-relative: "../../bower_components/";

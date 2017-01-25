@@ -1,0 +1,148 @@
+.dsx-page-header{
+    padding: 0 24px;
+    max-width: 920px;
+
+    @media only screen and (min-width: $screen-sm){
+        padding: 0 0 0 60px;
+    }
+
+    @media only screen and (min-width: $screen-lg){
+        padding: 0;
+    }
+
+    &.-primary{
+        margin-bottom: 15px;
+
+        @media only screen and (min-width: $screen-sm){
+            margin-bottom: 45px;
+        }
+
+        @media only screen and (min-width: $screen-lg){
+            margin-bottom: 70px;
+        }
+    }
+
+    &.-secondary{
+        margin-bottom: 15px;
+
+        @media only screen and (min-width: $screen-sm){
+            margin-bottom: 45px;
+        }
+
+        @media only screen and (min-width: $screen-lg){
+            margin-bottom: 65px;
+        }
+    }
+
+    &-title{
+        font-family: $font-family-secondary;
+        display: inline-block;
+    }
+
+    &-subtitle-action{
+        display: inline-block;
+        margin-left: 60px;
+
+        a{
+            color: rgba(255,255,255,.4);
+            transition: all 0.2s;
+
+            &:hover,&:focus{
+                color: $color-base;
+                text-decoration: none;
+            }
+        }
+    }
+
+    &-subtitle{
+        color: rgba(255,255,255,.6);
+        font-size: 16px;
+        letter-spacing: 0.57px;
+        line-height: 23px;
+
+        &-link{
+            color: rgba(255,255,255,.6);
+            text-decoration: underline;
+            transition: all 0.2s;
+
+            &:hover, &:focus{
+                color: $color-base;
+            }
+        }
+    }
+
+    &-rate{
+        float: right;
+        line-height: 38px;
+        color: rgba(255,255,255,.6);
+        letter-spacing: 0.44px;
+    }
+
+    &-verify{
+        margin-bottom: 13px;
+
+        &.-error{
+            a{
+                color: $color-warning-secondary;
+            }
+        }
+
+        &.-success{
+            a{
+                color: $color-success;
+            }
+        }
+
+        a {
+            font-size: 16px;
+            display: inline-block;
+            vertical-align: middle;
+
+            &:hover, &:focus{
+                text-decoration: none;
+            }
+        }
+
+        &-icon{
+            margin-right: 12px;
+            width: 21px;
+            height: 21px;
+            display: inline-block;
+            vertical-align: middle;
+            border-radius: 50%;
+            position: relative;
+
+            svg{
+                color: $color-base;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        &.-error &-icon{
+            background-color: $color-warning-secondary;
+
+            svg{
+                width: 8px;
+                transform: none;
+                margin-left: -5px;
+                margin-top: -6px;
+            }
+        }
+
+        &.-success &-icon{
+            background-color: $color-success;
+        }
+
+        &-action{
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+
+    &-action{
+        padding-top: 30px;
+    }
+}

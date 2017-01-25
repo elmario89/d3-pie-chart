@@ -1,0 +1,188 @@
+.dsx-right-sidebar{
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    @media only screen and (min-width: $screen-sm){
+        float: right;
+        width: 50%;
+        padding-left: 10px;
+    }
+
+    @media only screen and (min-width: $screen-lg){
+        position: absolute;
+        width: auto;
+        right: 0;
+        top: 0;
+        min-width: 268px;
+        padding-left: 5px;
+    }
+
+    &-item{
+        margin-bottom: 40px;
+
+        &.-last{
+            margin-bottom: 24px;
+        }
+
+        &-header{
+            margin-bottom: 16px;
+
+            @media only screen and (min-width: $screen-sm){
+                margin-bottom: 25px;
+            }
+
+            &-title{
+                color: $color-tertiary;
+                text-transform: uppercase;
+                font-size: 13px;
+                letter-spacing: 1.66px;
+                line-height: 15px;
+                font-weight: bold;
+
+                a {
+                    position: relative;
+                    color: $color-base;
+
+                    &:hover, &:focus{
+                        text-decoration: none;
+                    }
+                }
+
+                &.-primary{
+                    padding-left: 20px;
+
+                    a {
+
+                        @media only screen and (min-width: $screen-sm){
+                            &:before{
+                                content: "";
+                                position: absolute;
+                                background-color: $color-tertiary;
+                                height: 1px;
+                                width: 14px;
+                                left: -25px;
+                                top: 50%;
+                            }
+
+                            &:after{
+                                content: "";
+                                position: absolute;
+                                background-color: $color-tertiary;
+                                height: 1px;
+                                width: 200px;
+                                left: 115%;
+                                top: 50%;
+                            }
+                        }
+                    }
+                }
+
+                &.-secondary{
+                    padding-right: 52px;
+
+                    a {
+                        padding-left: 24px;
+
+                        @media only screen and (min-width: $screen-sm){
+                            float: right;
+                            padding-left: 0;
+
+                            &:after{
+                                content: "";
+                                position: absolute;
+                                background-color: $color-tertiary;
+                                height: 1px;
+                                width: 200px;
+                                left: 115%;
+                                top: 50%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &-content{
+            &-list{
+                list-style-type: none;
+                margin: 0;
+                color: $color-base;
+                background-color: $color-secondary;
+                font-size: 16px;
+
+                @media only screen and (min-width: $screen-sm){
+                    padding-top: 30px;
+                }
+
+                &.-secondary{
+                    li{
+                        border: 1px solid #393D56;
+                    }
+                }
+
+                li{
+                    padding: 17px 25px 17px 21px;
+
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+
+                    @media only screen and (min-width: $screen-sm){
+                        padding: 0 25px 30px 21px;
+                    }
+                }
+
+                &-left{
+                    font-weight: bold;
+                    margin-right: 44px;
+
+                    &.-unchecked, &.-checked{
+                        padding-left: 30px;
+                        position: relative;
+                        margin-right: 0;
+
+                        svg{
+                            position: absolute;
+                            left: 3px;
+                            top: 50%;
+                            margin-top: -6px;
+                        }
+                    }
+
+                    &.-unchecked{
+                        svg{
+                            color: $color-error;
+                        }
+                    }
+
+                    &.-checked{
+                        svg{
+                            color: $color-success;
+                            height: 11px;
+                            width: 15px;
+                            margin-left: -2px;
+                        }
+                    }
+                }
+
+                &-right{
+                    font-weight: lighter;
+                    float: right;
+                }
+
+                &-card{
+                    padding-top: 10px;
+                    color: rgba(255,255,255,.4);
+                    letter-spacing: 1.13px;
+                    font-size: 12px;
+                }
+
+                &-action{
+                    .dsx-button {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

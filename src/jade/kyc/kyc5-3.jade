@@ -1,0 +1,39 @@
+extends /_includes/layout.jade
+
+block title
+    title DSX
+    meta(name="description", content="")
+
+block content
+    .dsx-wrap-outer.-primary
+        .dsx-wrap
+            .dsx-wrap-inner.-primary
+
+                .dsx-page-header.-primary
+                    .dsx-page-header-title
+                        h1 Profile
+                    .dsx-page-header-subtitle-action
+                        a(href="")
+                            h2 Settings
+                    .dsx-page-header-subtitle-action
+                        a(href="")
+                            h2 Security
+                    .dsx-page-header-subtitle-action
+                        a(href="")
+                            h2 API
+
+
+                .dsx-kyc
+                    .dsx-kyc-item
+                        .dsx-kyc-item-content.-tertiary
+                            .dsx-kyc-item-content-verifying-review
+                                .dsx-kyc-item-content-verifying-review-image
+                                    i.dsx-sprite.-verify
+
+                                .dsx-kyc-item-content-verifying-review-title
+                                    h2 Verifying
+
+                                .dsx-kyc-item-content-verifying-review-subtitle
+                                    | Thank you for submitting the documents, your application is under review.
+                                    br
+                                    | Verification may take up to 48 hours.

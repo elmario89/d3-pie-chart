@@ -1,0 +1,33 @@
+.dsx-pie-chart{
+    position: fixed;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+
+    height: 100%;
+    width: 100%;
+    max-height: 866px;
+    max-width: 866px;
+
+    @media only screen and (min-width: $screen-sm){
+        display: block;
+    }
+
+    @media only screen and (min-width: $screen-md){
+        top: 59%;
+    }
+
+    svg{
+        .arc text {
+            font: 10px sans-serif;
+            text-anchor: middle;
+        }
+
+        .arc path {
+            stroke: #fff;
+        }
+    }
+}
+

@@ -1,0 +1,104 @@
+.dsx-button{
+    border: none;
+    padding: 20px 32px;
+    letter-spacing: 1.3px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    &.-animated{
+        transition: all 0.2s;
+
+        span{
+            margin-right: 11px;
+
+            transition: all 0.2s;
+        }
+
+        svg{
+            display: inline-block;
+            vertical-align: bottom;
+
+            transition: all 0.2s;
+        }
+
+        &:hover{
+            padding-right: 45px;
+
+            span{
+                margin-right: 20px;
+            }
+        }
+    }
+
+    &.-disabled{
+        pointer-events: none;
+        opacity: 0.2;
+    }
+
+    &.-primary{
+        background-color: $color-secondary;
+        color: $color-base;
+    }
+
+    &.-secondary{
+        background-color: $color-base;
+        color: $color-secondary;
+    }
+
+    &.-tertiary{
+        background-color: transparent;
+        color: $color-base;
+        border: 1px solid $color-base;
+        padding: 17px 26px;
+
+        transition: all 0.2s;
+
+        &:hover{
+            background-color: $color-base;
+            color: $color-secondary;
+        }
+    }
+
+    &.-fourth{
+        background-color: transparent;
+        color: $color-base;
+        border: 1px solid $color-base;
+        padding: 15px 26px;
+
+        transition: all 0.2s;
+
+        &:hover{
+            background-color: $color-base;
+            color: $color-secondary;
+        }
+    }
+
+    &.-link{
+        color: $color-base;
+        font-weight: bold;
+        font-size: 13px;
+        letter-spacing: 1.66px;
+        text-transform: uppercase;
+
+        &:hover,&:focus{
+            color: $color-base;
+        }
+    }
+
+    &.-danger{
+        background-color: $color-warning-secondary;
+        color: $color-base;
+    }
+
+    &.-success{
+        background-color: transparent;
+        color: $color-success;
+        border: 1px solid $color-success;
+        transition: all 0.2s;
+
+        &:hover{
+            background-color: $color-success;
+            color: $color-base;
+        }
+    }
+}

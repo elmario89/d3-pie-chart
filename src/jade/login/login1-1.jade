@@ -1,0 +1,53 @@
+extends /_includes/layout.jade
+
+block title
+    title DSX
+    meta(name="description", content="")
+
+    - LOGIN = true;
+
+block content
+    .dsx-wrap-outer
+        .dsx-wrap
+            .dsx-wrap-inner.-tertiary
+                .dsx-login
+                    .dsx-login-header
+                        .dsx-login-header-title
+                            .dsx-login-header-title-action
+                                a(href="")
+                                    +svgsprite("long-arrow-left")
+                                    h2 Register
+
+                    .dsx-login-email
+                        fieldset.dsx-form-input-container.-primary
+                            input.dsx-form-input.-transparent
+                            legend.dsx-form-input-container-label twitter
+
+                        fieldset.dsx-form-input-container.-primary
+                            input.dsx-form-input.-transparent
+                            legend.dsx-form-input-container-label email
+
+                    .dsx-login-policy
+                        .dsx-checkbox
+                            label
+                                input(type="checkbox", name="support")
+                                span.dsx-checkbox-box
+                                span.dsx-checkbox-text By registering DSX trading account you agree to the
+                                | &nbsp;
+                                a.dsx-checkbox-link(href="") Trading Manual,
+                                    br
+                                    | Privacy Policy, AML Policy and Cookie Policy
+
+                        .dsx-checkbox
+                            label
+                                input(type="checkbox", name="support")
+                                span.dsx-checkbox-box
+                                span.dsx-checkbox-text By registering DSX trading account you agree to the
+                                | &nbsp;
+                                a.dsx-checkbox-link(href="") User Agreement
+
+
+                    .dsx-login-action
+                        button.dsx-button.-secondary.-animated(type='button')
+                            span Register
+                            +svgsprite("chevron-right")

@@ -1,0 +1,377 @@
+.dsx-kyc{
+    max-width: 1060px;
+
+    &-item{
+        margin-bottom: 60px;
+        margin-left: -60px;
+        position: relative;
+
+        &.-sm-margin{
+            margin-bottom: 20px;
+        }
+
+        &-title{
+            margin-bottom: 15px;
+            padding-left: 60px;
+
+            &.-error{
+                svg{
+                    color: $color-error;
+                }
+            }
+
+            &.-success{
+                svg{
+                    color: $color-success;
+                }
+
+            }
+
+            svg{
+                margin-right: 26px;
+                display: inline-block;
+
+                &.-times{
+                    width: 16px !important;
+                    height: 16px !important;
+                }
+
+                &.-check{
+                    width: 18px !important;
+                    height: 14px !important;
+                }
+            }
+
+            h2{
+                color: $color-base;
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+
+        &-content{
+            background-color: $color-base;
+            position: relative;
+            padding: 57px 60px;
+
+            &.-secondary{
+                padding: 0;
+            }
+
+            &.-tertiary{
+                padding-bottom: 34px;
+            }
+
+            &-row{
+                margin-bottom: 30px;
+                max-width: 800px;
+
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
+
+            &-residence{
+                display: table;
+                width: 100%;
+
+                &-left{
+                    display: table-cell;
+                    position: relative;
+                    vertical-align: top;
+                    padding: 40px 40px 90px 40px;
+                    width: 390px;
+                    height: 100%;
+                    background-color: $color-fill;
+                    border-right: 1px dashed rgba(0,0,0,.2);
+
+                    &-content{
+                        text-align: center;
+                        width: 100%;
+                        position: relative;
+
+                        &.-secondary{
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                        }
+
+                        &-icon{
+                            width: 50px;
+                            height: 50px;
+                            border-radius: 50%;
+                            position: relative;
+                            margin-bottom: 25px;
+                            display: inline-block;
+
+                            svg{
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                color: $color-base;
+                            }
+
+                            &.-primary{
+                                background-color: $color-secondary;
+                            }
+
+                            &.-success{
+                                background-color: $color-success;
+                            }
+
+                            &.-error{
+                                background-color: $color-danger;
+                            }
+
+                            &.-loading{
+                                border: 3px solid $color-secondary;
+                            }
+                        }
+
+                        &-title{
+                            font-weight: lighter;
+                            font-size: 24px;
+                            letter-spacing: 0.48px;
+                            line-height: 24px;
+                            margin-bottom: 5px;
+                        }
+
+                        &-subtitle{
+                            line-height: 19px;
+                            color: #B2B2B2;
+
+                            a{
+                                color: #68A3F2;
+                            }
+
+                            &.-error{
+                                color: $color-danger;
+                            }
+                        }
+
+                        &-files{
+                            &-list{
+                                text-align: left;
+
+                                &-item{
+                                    position: relative;
+                                    margin-bottom: 24px;
+
+                                    &.-success &-icon{
+                                        background-color: $color-success;
+                                    }
+
+                                    &.-error &-icon{
+                                        background-color: $color-danger;
+                                    }
+
+                                    &.-loading &-icon{
+                                        border: 2px solid $color-secondary;
+                                    }
+
+                                    &-icon{
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        border-radius: 50%;
+                                        width: 25px;
+                                        height: 25px;
+
+                                        svg{
+                                            color: $color-base;
+                                            width: 12px !important;
+                                            height: 12px !important;
+                                            position: absolute;
+                                            top: 50%;
+                                            left: 50%;
+                                            transform: translate(-50%, -50%);
+                                        }
+                                    }
+
+                                    &-file{
+                                        padding-left:45px;
+                                        padding-right: 25px;
+
+                                        &-title{
+                                            font-size: 24px;
+                                            font-weight: lighter;
+                                            letter-spacing: 0.48px;
+                                            line-height: 24px;
+                                            margin-bottom: 4px;
+                                        }
+
+                                        &-subtitle{
+                                            line-height: 19px;
+                                        }
+                                    }
+
+                                    &.-success &-file{
+                                        &-subtitle{
+                                            color: #B2B2B2;;
+                                        }
+                                    }
+
+                                    &.-error &-file{
+                                        &-subtitle{
+                                            color: $color-danger;
+                                        }
+                                    }
+
+                                    &.-loading &-file{
+                                        &-subtitle{
+                                            color: #B2B2B2;
+                                        }
+                                    }
+
+                                    &-delete{
+                                        position: absolute;
+                                        top: 10px;
+                                        right: 0;
+
+                                        a{
+                                            color: $color-black;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &-description{
+                        position: absolute;
+                        left: 40px;
+                        bottom: 40px;
+                        color: rgba(0,0,0,.3);
+                        line-height: 17px;
+                        letter-spacing: 0.43;
+                        font-size: 12px;
+                    }
+
+                    &-additional-upload{
+                        position: absolute;
+                        bottom: 40px;
+                        right: 40px;
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+
+                        &.-primary{
+                            background-color: $color-secondary;
+                        }
+
+                        svg{
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            color: $color-base;
+                        }
+                    }
+
+                    &-close{
+                        color: $color-black;
+                        position: absolute;
+                        top: 28px;
+                        right: 28px;
+
+                        &:hover, &:focus{
+                            color: $color-black;
+                        }
+                    }
+                }
+
+                &-right{
+                    padding: 50px 200px 45px 60px;
+                    display: table-cell;
+                    vertical-align: top;
+
+                    &-title{
+                        margin-bottom: 12px;
+
+                        span{
+                            font-size: 24px;
+                            line-height: 24px;
+                            letter-spacing: 0.48px;
+                            font-weight: lighter;
+
+                            &.-bold{
+                                font-weight: bold;
+                            }
+                        }
+                    }
+
+                    &-subtitle{
+                        letter-spacing: 0.5px;
+                        line-height: 20px;
+                        color: rgba(0,0,0,.5);
+                        margin-bottom: 26px;
+                    }
+
+                    .dsx-enumeration{
+                        margin-bottom: 40px;
+                    }
+
+                    &-action{
+                        a{
+                            letter-spacing: 0.5px;
+                            font-weight: bold;
+                            position: relative;
+
+                            &:hover, &:focus{
+                                text-decoration: none;
+
+                                &:after{
+                                    width: 100%;
+                                }
+                            }
+
+                            &:after{
+                                width: 30px;
+                                height: 2px;
+                                content: "";
+                                position: absolute;
+                                display: block;
+                                left: 0;
+                                bottom: -5px;
+                                background-color: $color-link;
+
+                                transition: all 0.2s;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &-verifying-review{
+                text-align: center;
+
+                &-image{
+                    margin-bottom: 33px;
+                }
+
+                &-title{
+                    margin-bottom: 15px;
+
+                    h2{
+                        letter-spacing: 1.43px;
+                    }
+                }
+
+                &-subtitle{
+                    font-size: 16px;
+                    letter-spacing: 0.57px;
+                    color: #999999;
+                    line-height: 27px;
+                }
+            }
+        }
+
+        &-action{
+            position: absolute;
+            right: -15px;
+            bottom: 30px;
+        }
+    }
+}

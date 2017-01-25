@@ -1,0 +1,207 @@
+extends /_includes/layout.jade
+
+block title
+    title DSX
+    meta(name="description", content="")
+
+block content
+    include ../_includes/d3-chart
+
+    .dsx-wrap-outer.-primary
+        .dsx-wrap
+            .dsx-wrap-inner.-primary
+                .dsx-page-header.-primary
+                    .dsx-page-header-title
+                        h1 Exchange
+                    .dsx-page-header-subtitle.hidden-xs DSX is required by law to conduct relevant due diligence on all of its customers.
+                    .dsx-page-header-rate.visible-xs-inline-block 1 EUR = 1.04 USD
+
+                .dsx-exchange-box
+
+                    .dsx-exchange-box-left
+                        .dsx-exchange-box-left-currency-switcher
+                            .dsx-dropdown.-primary
+                                a.dsx-dropdown-toggle(data-toggle='dropdown', aria-haspopup='true', aria-expanded='true')
+                                    | EUR
+                                    span.caret
+                                ul.dsx-dropdown-menu
+                                    li
+                                        a(href='#') eur
+                                    li
+                                        a(href='#') ltc
+                                    li
+                                        a(href='#') usd
+                                    li
+                                        a(href='#') btc
+                                    li
+                                        a(href='#') rub
+                                    li
+                                        a(href='#') lorem
+                                    li
+                                        a(href='#') ipsum
+
+                        .dsx-exchange-box-left-currency-input
+                            input.dsx-form-input.-flat.-secondary(type='text')
+
+                        .dsx-exchange-box-left-card-switcher
+                            .dsx-exchange-box-left-card-switcher-title Send from
+                            .dsx-exchange-box-left-card-switcher-dropdown
+                                i.dsx-sprite.-payment-card-sm
+
+                                .dsx-dropdown.-secondary
+                                    a.dsx-dropdown-toggle(data-toggle='dropdown', aria-haspopup='true', aria-expanded='true')
+                                        | Visa *0067
+                                        span.caret
+                                    ul.dsx-dropdown-menu
+                                        li
+                                            a.dsx-dropdown-menu-card(href='#') Visa Card - 0067
+                                            a.dsx-dropdown-menu-redact
+                                                +svgsprite("pencil")
+                                        li
+                                            a.dsx-dropdown-menu-card(href='#') Visa Card - 3206
+                                            a.dsx-dropdown-menu-redact
+                                                +svgsprite("pencil")
+                                        li
+                                            a.dsx-dropdown-menu-card(href='#') ePayments - 006700 lorem ipsum lorem lorem ipsum lorem
+                                            a.dsx-dropdown-menu-redact
+                                                +svgsprite("pencil")
+                                        li
+                                            a.dsx-dropdown-menu-card(href='#') Bank Account - 033
+                                            a.dsx-dropdown-menu-redact
+                                                +svgsprite("pencil")
+                                        li
+                                            a.dsx-dropdown-menu-card(href='#') BTC Wallet
+                                            a.dsx-dropdown-menu-redact
+                                                +svgsprite("pencil")
+                                        li
+                                            .dsx-dropdown-menu-footer
+                                                a.dsx-dropdown-menu-footer-action
+                                                    +svgsprite("plus")
+
+                        .dsx-exchange-box-left-fee
+                            span.dsx-exchange-box-left-fee-title.hidden-xs Transaction fee:
+                            span.dsx-exchange-box-left-fee-value  2% (+$20)
+
+                    .dsx-exchange-box-switcher#currency-switcher
+                        a
+                            +svgsprite("change")
+
+                    .dsx-exchange-box-rate.hidden-xs
+                        .dsx-exchange-box-rate-icon
+                            +svgsprite("spinner")
+                        .dsx-exchange-box-rate-value 1 USD = 0.94 EUR
+
+                    .dsx-exchange-box-right
+                        .dsx-exchange-box-right-currency-switcher
+                            .dsx-dropdown.-primary
+                                a.dsx-dropdown-toggle(data-toggle='dropdown', aria-haspopup='true', aria-expanded='true')
+                                    | USD
+                                    span.caret
+                                ul.dsx-dropdown-menu
+                                    li
+                                        a(href='#') eur
+                                    li
+                                        a(href='#') ltc
+                                    li
+                                        a(href='#') usd
+                                    li
+                                        a(href='#') btc
+                                    li
+                                        a(href='#') rub
+                                    li
+                                        a(href='#') lorem
+                                    li
+                                        a(href='#') ipsum
+
+                        .dsx-exchange-box-right-currency-input
+                            input.dsx-form-input.-flat.-secondary(type='text')
+
+                        .dsx-exchange-box-right-card-switcher
+                            .dsx-exchange-box-right-card-switcher-title Receive to
+                            .dsx-exchange-box-right-card-switcher-dropdown
+                                i.dsx-sprite.-payment-bank-sm
+
+                                .dsx-dropdown.-secondary
+                                    a.dsx-dropdown-toggle(data-toggle='dropdown', aria-haspopup='true', aria-expanded='true')
+                                        | Bank Account - 033
+                                        span.caret
+                                    ul.dsx-dropdown-menu
+                                        li
+                                            a.dsx-dropdown-menu-card(href='#') Visa Card - 0067
+                                            a.dsx-dropdown-menu-redact
+                                                +svgsprite("pencil")
+                                        li
+                                            a.dsx-dropdown-menu-card(href='#') Visa Card - 3206
+                                            a.dsx-dropdown-menu-redact
+                                                +svgsprite("pencil")
+                                        li
+                                            a.dsx-dropdown-menu-card(href='#') ePayments - 006700
+                                            a.dsx-dropdown-menu-redact
+                                                +svgsprite("pencil")
+                                        li
+                                            a.dsx-dropdown-menu-card(href='#') Bank Account - 033
+                                            a.dsx-dropdown-menu-redact
+                                                +svgsprite("pencil")
+                                        li
+                                            a.dsx-dropdown-menu-card(href='#') BTC Wallet lorem ipsum lorem lorem ipsum lorem
+                                            a.dsx-dropdown-menu-redact
+                                                +svgsprite("pencil")
+                                        li
+                                            .dsx-dropdown-menu-footer
+                                                a.dsx-dropdown-menu-footer-action
+                                                    +svgsprite("plus")
+
+                        .dsx-exchange-box-right-fee
+                            span.dsx-exchange-box-right-fee-title.hidden-xs Transaction fee:
+                            span.dsx-exchange-box-right-fee-value  1% min $50
+
+                    .dsx-exchange-box-action
+                        button.dsx-button.-primary.-animated(type='button')
+                            span Exchange
+                            +svgsprite("chevron-right")
+
+                .dsx-right-sidebar
+                    .dsx-right-sidebar-item
+                        .dsx-right-sidebar-item-header
+                            .dsx-right-sidebar-item-header-title.-primary
+                                a(href="") balance
+                        .dsx-right-sidebar-item-content
+                            ul.dsx-right-sidebar-item-content-list
+                                li
+                                    span.dsx-right-sidebar-item-content-list-left BTC
+                                    span.dsx-right-sidebar-item-content-list-right 123.696325111988
+                                li
+                                    span.dsx-right-sidebar-item-content-list-left LTC
+                                    span.dsx-right-sidebar-item-content-list-right 93 707.29220
+                                li
+                                    span.dsx-right-sidebar-item-content-list-left USD
+                                    span.dsx-right-sidebar-item-content-list-right 100 247.10
+                                li
+                                    span.dsx-right-sidebar-item-content-list-left EUR
+                                    span.dsx-right-sidebar-item-content-list-right 2 345.34
+                                li
+                                    span.dsx-right-sidebar-item-content-list-left RUB
+                                    span.dsx-right-sidebar-item-content-list-right 3 245.43
+
+                    .dsx-right-sidebar-item.-last
+                        .dsx-right-sidebar-item-header
+                            .dsx-right-sidebar-item-header-title.-secondary
+                                a(href="") favorites
+                        .dsx-right-sidebar-item-content.visible-xs-block
+                            ul.dsx-right-sidebar-item-content-list.-secondary
+                                li
+                                    span.dsx-right-sidebar-item-content-list-left BTC/EUR
+                                    span.dsx-right-sidebar-item-content-list-right 0.232435
+                                    .dsx-right-sidebar-item-content-list-card My acc > Epayments
+                                li
+                                    span.dsx-right-sidebar-item-content-list-left EUR/USD
+                                    span.dsx-right-sidebar-item-content-list-right $100
+                                    .dsx-right-sidebar-item-content-list-card *0067 > BTC London
+                                li
+                                    span.dsx-right-sidebar-item-content-list-left EUR/USD
+                                    span.dsx-right-sidebar-item-content-list-right $200
+                                    .dsx-right-sidebar-item-content-list-card *0067 > BTC London
+
+
+                .dsx-chart-container.hidden-xs
+                    #currency-compare

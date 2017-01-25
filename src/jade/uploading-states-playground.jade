@@ -1,0 +1,389 @@
+extends /_includes/layout.jade
+
+block title
+    title DSX
+    meta(name="description", content="")
+
+block content
+    .dsx-wrap-outer.-primary
+        .dsx-wrap
+            .dsx-wrap-inner.-primary
+                .dsx-kyc
+
+                    p.-white first state, nothing is loaded
+                    .dsx-kyc-item
+                        .dsx-kyc-item-content.-secondary
+                            .dsx-kyc-item-content-residence
+                                .dsx-kyc-item-content-residence-left
+                                    .dsx-kyc-item-content-residence-left-content.-secondary
+                                        .dsx-kyc-item-content-residence-left-content-icon.-primary
+                                            +svgsprite("upload")
+
+                                        .dsx-kyc-item-content-residence-left-content-title Drag & drop
+
+                                        .dsx-kyc-item-content-residence-left-content-subtitle
+                                            | your file, or
+                                            br
+                                            a browse
+
+                                    .dsx-kyc-item-content-residence-left-description
+                                        | Upload a JPG, PNG
+                                        br
+                                        | or PDF file. Max. 30MB
+
+                                .dsx-kyc-item-content-residence-right
+                                    .dsx-kyc-item-content-residence-right-title
+                                        span.-bold Proof &nbsp;
+                                        span of residence
+
+                                    .dsx-kyc-item-content-residence-right-subtitle
+                                        span Must be dated within the last 3 months and must show the same name and address as the one on your DSX account
+
+                                    .dsx-enumeration.-secondary
+                                        ul.dsx-enumeration-list
+                                            li
+                                                span.dsx-enumeration-list-header Utility bill (i.e. telephone, gas, electric) Please note that a mobile phone bill will not be accepted as a valid Proof of Residence
+                                            li
+                                                span.dsx-enumeration-list-header Recent bank or credit card statement
+                                            li
+                                                span.dsx-enumeration-list-header Council tax statement
+                                            li
+                                                span.dsx-enumeration-list-header Inland Revenue Tax Assessment
+                                            li
+                                                span.dsx-enumeration-list-header Signed Lease Agreement still within term
+
+                                    .dsx-kyc-item-content-residence-right-action
+                                        a Examples
+
+                            .dsx-kyc-item-action
+                                button.dsx-button.-primary.-animated(type='button')
+                                    span Save
+                                    +svgsprite("chevron-right")
+
+                    br
+                    br
+
+                    p.-white success load
+                    .dsx-kyc-item
+                        .dsx-kyc-item-content.-secondary
+                            .dsx-kyc-item-content-residence
+                                .dsx-kyc-item-content-residence-left
+
+                                    a.dsx-kyc-item-content-residence-left-close
+                                        +svgsprite("times")
+
+                                    .dsx-kyc-item-content-residence-left-content.-secondary
+                                        .dsx-kyc-item-content-residence-left-content-icon.-success
+                                            +svgsprite("check")
+
+                                        .dsx-kyc-item-content-residence-left-content-title 49_NTElsa…cument.jpg
+
+                                        .dsx-kyc-item-content-residence-left-content-subtitle 1.25 MB
+
+                                    .dsx-kyc-item-content-residence-left-description
+                                        | Upload a JPG, PNG
+                                        br
+                                        | or PDF file. Max. 30MB
+
+                                    a.dsx-kyc-item-content-residence-left-additional-upload.-primary
+                                        +svgsprite("upload")
+
+                                .dsx-kyc-item-content-residence-right
+                                    .dsx-kyc-item-content-residence-right-title
+                                        span.-bold Proof &nbsp;
+                                        span of residence
+
+                                    .dsx-kyc-item-content-residence-right-subtitle
+                                        span Must be dated within the last 3 months and must show the same name and address as the one on your DSX account
+
+                                    .dsx-enumeration.-secondary
+                                        ul.dsx-enumeration-list
+                                            li
+                                                span.dsx-enumeration-list-header Utility bill (i.e. telephone, gas, electric) Please note that a mobile phone bill will not be accepted as a valid Proof of Residence
+                                            li
+                                                span.dsx-enumeration-list-header Recent bank or credit card statement
+                                            li
+                                                span.dsx-enumeration-list-header Council tax statement
+                                            li
+                                                span.dsx-enumeration-list-header Inland Revenue Tax Assessment
+                                            li
+                                                span.dsx-enumeration-list-header Signed Lease Agreement still within term
+
+                                    .dsx-kyc-item-content-residence-right-action
+                                        a Examples
+
+                            .dsx-kyc-item-action
+                                button.dsx-button.-primary.-animated(type='button')
+                                    span Save
+                                    +svgsprite("chevron-right")
+
+                    br
+                    br
+
+                    p.-white error load
+
+                    .dsx-kyc-item
+                        .dsx-kyc-item-content.-secondary
+                            .dsx-kyc-item-content-residence
+                                .dsx-kyc-item-content-residence-left
+
+                                    a.dsx-kyc-item-content-residence-left-close
+                                        +svgsprite("times")
+
+                                    .dsx-kyc-item-content-residence-left-content.-secondary
+
+                                        .dsx-kyc-item-content-residence-left-content-icon.-error
+                                            +svgsprite("exclamation")
+
+                                        .dsx-kyc-item-content-residence-left-content-title 49_NTElsa…cument.jpg
+
+                                        .dsx-kyc-item-content-residence-left-content-subtitle.-error Wrong statement please attach another one
+
+                                    .dsx-kyc-item-content-residence-left-description
+                                        | Upload a JPG, PNG
+                                        br
+                                        | or PDF file. Max. 30MB
+
+                                    a.dsx-kyc-item-content-residence-left-additional-upload.-primary
+                                        +svgsprite("upload")
+
+                                .dsx-kyc-item-content-residence-right
+                                    .dsx-kyc-item-content-residence-right-title
+                                        span.-bold Proof &nbsp;
+                                        span of residence
+
+                                    .dsx-kyc-item-content-residence-right-subtitle
+                                        span Must be dated within the last 3 months and must show the same name and address as the one on your DSX account
+
+                                    .dsx-enumeration.-secondary
+                                        ul.dsx-enumeration-list
+                                            li
+                                                span.dsx-enumeration-list-header Utility bill (i.e. telephone, gas, electric) Please note that a mobile phone bill will not be accepted as a valid Proof of Residence
+                                            li
+                                                span.dsx-enumeration-list-header Recent bank or credit card statement
+                                            li
+                                                span.dsx-enumeration-list-header Council tax statement
+                                            li
+                                                span.dsx-enumeration-list-header Inland Revenue Tax Assessment
+                                            li
+                                                span.dsx-enumeration-list-header Signed Lease Agreement still within term
+
+                                    .dsx-kyc-item-content-residence-right-action
+                                        a Examples
+
+                            .dsx-kyc-item-action
+                                button.dsx-button.-primary.-animated(type='button')
+                                    span Save
+                                    +svgsprite("chevron-right")
+
+
+                    br
+                    br
+
+                    p.-white load processing
+
+                    .dsx-kyc-item
+                        .dsx-kyc-item-content.-secondary
+                            .dsx-kyc-item-content-residence
+                                .dsx-kyc-item-content-residence-left
+
+                                    a.dsx-kyc-item-content-residence-left-close
+                                        +svgsprite("times")
+
+                                    .dsx-kyc-item-content-residence-left-content.-secondary
+
+                                        .dsx-kyc-item-content-residence-left-content-icon.-loading
+
+                                        .dsx-kyc-item-content-residence-left-content-title 49_NTElsa…cument.jpg
+
+                                    .dsx-kyc-item-content-residence-left-description
+                                        | Upload a JPG, PNG
+                                        br
+                                        | or PDF file. Max. 30MB
+
+                                    a.dsx-kyc-item-content-residence-left-additional-upload.-primary
+                                        +svgsprite("upload")
+
+                                .dsx-kyc-item-content-residence-right
+                                    .dsx-kyc-item-content-residence-right-title
+                                        span.-bold Proof &nbsp;
+                                        span of residence
+
+                                    .dsx-kyc-item-content-residence-right-subtitle
+                                        span Must be dated within the last 3 months and must show the same name and address as the one on your DSX account
+
+                                    .dsx-enumeration.-secondary
+                                        ul.dsx-enumeration-list
+                                            li
+                                                span.dsx-enumeration-list-header Utility bill (i.e. telephone, gas, electric) Please note that a mobile phone bill will not be accepted as a valid Proof of Residence
+                                            li
+                                                span.dsx-enumeration-list-header Recent bank or credit card statement
+                                            li
+                                                span.dsx-enumeration-list-header Council tax statement
+                                            li
+                                                span.dsx-enumeration-list-header Inland Revenue Tax Assessment
+                                            li
+                                                span.dsx-enumeration-list-header Signed Lease Agreement still within term
+
+                                    .dsx-kyc-item-content-residence-right-action
+                                        a Examples
+
+                            .dsx-kyc-item-action
+                                button.dsx-button.-primary.-animated(type='button')
+                                    span Save
+                                    +svgsprite("chevron-right")
+
+                    br
+                    br
+
+                    p.-white multiply files
+                    .dsx-kyc-item
+                        .dsx-kyc-item-content.-secondary
+                            .dsx-kyc-item-content-residence
+                                .dsx-kyc-item-content-residence-left
+                                    .dsx-kyc-item-content-residence-left-content
+
+                                        .dsx-kyc-item-content-residence-left-content-files
+                                            ul.dsx-kyc-item-content-residence-left-content-files-list
+                                                li.dsx-kyc-item-content-residence-left-content-files-list-item.-success
+                                                    span.dsx-kyc-item-content-residence-left-content-files-list-item-icon
+                                                        +svgsprite("check-bold")
+
+                                                    .dsx-kyc-item-content-residence-left-content-files-list-item-file
+                                                        .dsx-kyc-item-content-residence-left-content-files-list-item-file-title 49_NT…ment.jpg
+                                                        .dsx-kyc-item-content-residence-left-content-files-list-item-file-subtitle 1.25 MB
+
+                                                    span.dsx-kyc-item-content-residence-left-content-files-list-item-delete
+                                                        a
+                                                            +svgsprite("times")
+
+                                                li.dsx-kyc-item-content-residence-left-content-files-list-item.-success
+                                                    span.dsx-kyc-item-content-residence-left-content-files-list-item-icon
+                                                        +svgsprite("check-bold")
+
+                                                    .dsx-kyc-item-content-residence-left-content-files-list-item-file
+                                                        .dsx-kyc-item-content-residence-left-content-files-list-item-file-title 54_NT…ment.jpg
+                                                        .dsx-kyc-item-content-residence-left-content-files-list-item-file-subtitle Wrong statement please attach another one
+
+                                                    span.dsx-kyc-item-content-residence-left-content-files-list-item-delete
+                                                        a
+                                                            +svgsprite("times")
+
+                                    .dsx-kyc-item-content-residence-left-description
+                                        | Upload a JPG, PNG
+                                        br
+                                        | or PDF file. Max. 30MB
+
+                                    a.dsx-kyc-item-content-residence-left-additional-upload.-primary
+                                        +svgsprite("upload")
+
+                                .dsx-kyc-item-content-residence-right
+                                    .dsx-kyc-item-content-residence-right-title
+                                        span.-bold Proof &nbsp;
+                                        span of residence
+
+                                    .dsx-kyc-item-content-residence-right-subtitle
+                                        span Must be dated within the last 3 months and must show the same name and address as the one on your DSX account
+
+                                    .dsx-enumeration.-secondary
+                                        ul.dsx-enumeration-list
+                                            li
+                                                span.dsx-enumeration-list-header Utility bill (i.e. telephone, gas, electric) Please note that a mobile phone bill will not be accepted as a valid Proof of Residence
+                                            li
+                                                span.dsx-enumeration-list-header Recent bank or credit card statement
+                                            li
+                                                span.dsx-enumeration-list-header Council tax statement
+                                            li
+                                                span.dsx-enumeration-list-header Inland Revenue Tax Assessment
+                                            li
+                                                span.dsx-enumeration-list-header Signed Lease Agreement still within term
+
+                                    .dsx-kyc-item-content-residence-right-action
+                                        a Examples
+
+                            .dsx-kyc-item-action
+                                button.dsx-button.-primary.-animated(type='button')
+                                    span Save
+                                    +svgsprite("chevron-right")
+
+                    br
+                    br
+
+                    p.-white multiply files with error
+                    .dsx-kyc-item
+                        .dsx-kyc-item-content.-secondary
+                            .dsx-kyc-item-content-residence
+                                .dsx-kyc-item-content-residence-left
+                                    .dsx-kyc-item-content-residence-left-content
+                                        .dsx-kyc-item-content-residence-left-content-files
+                                            ul.dsx-kyc-item-content-residence-left-content-files-list
+                                                li.dsx-kyc-item-content-residence-left-content-files-list-item.-success
+                                                    span.dsx-kyc-item-content-residence-left-content-files-list-item-icon
+                                                        +svgsprite("check-bold")
+
+                                                    .dsx-kyc-item-content-residence-left-content-files-list-item-file
+                                                        .dsx-kyc-item-content-residence-left-content-files-list-item-file-title 49_NT…ment.jpg
+                                                        .dsx-kyc-item-content-residence-left-content-files-list-item-file-subtitle 1.25 MB
+
+                                                    span.dsx-kyc-item-content-residence-left-content-files-list-item-delete
+                                                        a
+                                                            +svgsprite("times")
+
+                                                li.dsx-kyc-item-content-residence-left-content-files-list-item.-error
+                                                    span.dsx-kyc-item-content-residence-left-content-files-list-item-icon
+                                                        +svgsprite("exclamation")
+
+                                                    .dsx-kyc-item-content-residence-left-content-files-list-item-file
+                                                        .dsx-kyc-item-content-residence-left-content-files-list-item-file-title 54_NT…ment.jpg
+                                                        .dsx-kyc-item-content-residence-left-content-files-list-item-file-subtitle Wrong statment please attach another one
+
+                                                    span.dsx-kyc-item-content-residence-left-content-files-list-item-delete
+                                                        a
+                                                            +svgsprite("times")
+
+                                                li.dsx-kyc-item-content-residence-left-content-files-list-item.-loading
+                                                    span.dsx-kyc-item-content-residence-left-content-files-list-item-icon
+
+                                                    .dsx-kyc-item-content-residence-left-content-files-list-item-file
+                                                        .dsx-kyc-item-content-residence-left-content-files-list-item-file-title 59_NT…ment.jpg
+
+                                                    span.dsx-kyc-item-content-residence-left-content-files-list-item-delete
+                                                        a
+                                                            +svgsprite("times")
+
+                                    .dsx-kyc-item-content-residence-left-description
+                                        | Upload a JPG, PNG
+                                        br
+                                        | or PDF file. Max. 30MB
+
+                                    a.dsx-kyc-item-content-residence-left-additional-upload.-primary
+                                        +svgsprite("upload")
+
+                                .dsx-kyc-item-content-residence-right
+                                    .dsx-kyc-item-content-residence-right-title
+                                        span.-bold Proof &nbsp;
+                                        span of residence
+
+                                    .dsx-kyc-item-content-residence-right-subtitle
+                                        span Must be dated within the last 3 months and must show the same name and address as the one on your DSX account
+
+                                    .dsx-enumeration.-secondary
+                                        ul.dsx-enumeration-list
+                                            li
+                                                span.dsx-enumeration-list-header Utility bill (i.e. telephone, gas, electric) Please note that a mobile phone bill will not be accepted as a valid Proof of Residence
+                                            li
+                                                span.dsx-enumeration-list-header Recent bank or credit card statement
+                                            li
+                                                span.dsx-enumeration-list-header Council tax statement
+                                            li
+                                                span.dsx-enumeration-list-header Inland Revenue Tax Assessment
+                                            li
+                                                span.dsx-enumeration-list-header Signed Lease Agreement still within term
+
+                                    .dsx-kyc-item-content-residence-right-action
+                                        a Examples
+
+                        .dsx-kyc-item-action
+                            button.dsx-button.-primary.-animated(type='button')
+                                span Save
+                                +svgsprite("chevron-right")

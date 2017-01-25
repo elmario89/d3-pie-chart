@@ -1,0 +1,42 @@
+extends /_includes/layout.jade
+
+block title
+    title DSX
+    meta(name="description", content="")
+
+    - LOGIN = true;
+
+block content
+    .dsx-wrap-outer
+        .dsx-wrap
+            .dsx-wrap-inner.-tertiary
+                .dsx-login
+                    .dsx-login-header
+                        .dsx-login-header-title
+                            h1 Verify your DSX Account
+                        .dsx-page-header-subtitle When you create a DSX Account we are required by law to carry out relevant customer due diligence. These regulations are designed to prevent the use of financial services industry for money laundering and terrorist financing. If you do not verify your account, you will not be able to make any financial transactions. To verify your account please provide the following information and the supporting documents:
+
+                    .dsx-enumeration.-primary
+                        ul.dsx-enumeration-list
+                            li
+                                span.dsx-enumeration-list-header Mobile phone
+                                span.dsx-enumeration-list-content Your phone and email are the two main means of communication with you. Mobile phone can also be used for a Two-factor authentication.
+                            li
+                                span.dsx-enumeration-list-header Personal details
+                                span.dsx-enumeration-list-content To verify your identity we need to check your personal details against a valid government issued ID which incorporates your full name, date of birth, gender and photograph.
+                            li
+                                span.dsx-enumeration-list-header Residential address
+                                span.dsx-enumeration-list-content
+                                    | To verify your current address we need to check against a recent utility bill or a bank or credit/debit
+                                    | card statement which incorporates your full name and was sent to your residential address within the last 3 months (not ones printed off the internet).
+
+                    .dsx-login-action
+                        button.dsx-button.-secondary(type='button') Get started
+                        a.dsx-button.-link Back to this later
+
+                    .dsx-login-agreement
+                        | Personal data and documents you provide are held on secure servers in the United Kingdom in compliance with the Data Protection Act 1998 and our &nbsp;
+                        a Privacy Policy.
+                        | &nbsp;
+                        | DSX as the data controller is registered with the Information Commissioner’s Office (ICO) for that purpose. Registration number: &nbsp;
+                        a ZA082812.

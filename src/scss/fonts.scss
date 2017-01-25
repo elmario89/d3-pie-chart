@@ -1,0 +1,23 @@
+/* Butler */
+@font-face {
+    font-family: 'Butler';
+    src: url('../fonts/butler/butler-regular.eot');
+    src: url('../fonts/butler/butler-regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/butler/butler-regular.woff') format('woff'),
+    url('../fonts/butler/butler-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sf-ui';
+    src: url('../fonts/sf-ui/sfui-thin.eot');
+    src: url('../fonts/sf-ui/sfui-thin.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/sf-ui/sfui-thin.woff') format('woff'),
+    url('../fonts/sf-ui/sfui-thin.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Roboto */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&subset=cyrillic');

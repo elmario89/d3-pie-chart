@@ -1,0 +1,422 @@
+extends /_includes/layout.jade
+
+block title
+    title DSX
+    meta(name="description", content="")
+
+block content
+    .dsx-wrap-outer.-primary
+        .dsx-wrap
+            .dsx-wrap-inner.-primary
+
+                .dsx-page-header.-primary
+                    .dsx-page-header-title
+                        h1 Profile
+                    .dsx-page-header-subtitle-action
+                        a(href="")
+                            h2 Settings
+                    .dsx-page-header-subtitle-action
+                        a(href="")
+                            h2 Security
+                    .dsx-page-header-subtitle-action
+                        a(href="")
+                            h2 API
+
+                    .dsx-page-header-verify.-error
+                        a.dsx-page-header-verify-icon
+                            +svgsprite("times")
+                        a.dsx-page-header-verify-message Not verified
+
+                    .dsx-page-header-subtitle
+                        | DSX is required by law to conduct relevant due diligence on all of its customers. Before you can deposit and withdraw funds, please, provide the following information and the supporting documents to &nbsp;
+                        a.dsx-page-header-subtitle-link verify your account.
+                    .dsx-page-header-rate.visible-xs-inline-block 1 EUR = 1.04 USD
+
+                    .dsx-page-header-action
+                        button.dsx-button.-success(type="button" data-toggle="modal" data-target="#verify") get verified
+
+                .dsx-kyc
+                    .dsx-kyc-item
+                        .dsx-kyc-item-title.-success
+                            +svgsprite("check")
+                            h2 Contact details
+                        .dsx-kyc-item-content
+                            .row
+                                .col-xs-6
+                                    .dsx-form-input-container.-secondary.-padded.-disabled
+                                        input.dsx-form-input.-transparent(placeholder="MOBILE PHONE", value="+44 323 232414", disabled="")
+                                        .dsx-form-input-container-message.-secondary
+                                            a Change
+
+                                .col-xs-6
+                                    fieldset.dsx-form-input-container.-secondary.-padded.-disabled
+                                        input.dsx-form-input.-transparent(value="milsnorris@gmail.com", disabled="")
+                                        legend.dsx-form-input-container-label email
+                                        .dsx-form-input-container-message.-secondary
+                                            a(data-toggle="modal" data-target="#email") Change
+
+                    .dsx-kyc-item
+                        .dsx-kyc-item-title.-success
+                            +svgsprite("check")
+                            h2 Personal information
+                        .dsx-kyc-item-content
+                            .dsx-kyc-item-content-row
+                                .row
+                                    .col-xs-6
+                                        .dsx-form-input-container.-secondary
+                                            input.dsx-form-input.-transparent(placeholder="FORENAME")
+
+                                    .col-xs-6
+                                        .dsx-form-input-container.-secondary
+                                            input.dsx-form-input.-transparent(placeholder="SURNAME")
+
+                            .dsx-kyc-item-content-row
+                                .row
+                                    .col-xs-6
+                                        fieldset.dsx-form-input-container.-secondary
+                                            .dsx-dropdown.-tertiary
+                                                a.dsx-dropdown-toggle.-chosen(data-toggle='dropdown', aria-haspopup='true', aria-expanded='true')
+                                                    | United Kingdom
+                                                    span.caret
+                                                ul.dsx-dropdown-menu
+                                                    li
+                                                        a.dsx-dropdown-menu-card(href='#') United Kingdom
+                                                    li
+                                                        a.dsx-dropdown-menu-card(href='#') Russia
+                                                    li
+                                                        a.dsx-dropdown-menu-card(href='#') Hungary lorem ipsum lorem lorem ipsum loremlorem lorem ipsum lorem
+                                                    li
+                                                        a.dsx-dropdown-menu-card(href='#') Netherlands
+                                                    li
+                                                        a.dsx-dropdown-menu-card(href='#') Spain
+                                            legend.dsx-form-input-container-label citizenship
+
+                                    .col-xs-6
+                                        fieldset.dsx-form-input-container.-secondary
+                                            a.dsx-form-input-container-calendar
+                                                +svgsprite("calendar")
+                                            legend.dsx-form-input-container-label date of birth
+
+                            .dsx-kyc-item-content-row
+                                .dsx-form-radio
+                                    .dsx-form-radio-title Gender
+                                    .dsx-form-radio-items
+                                        label
+                                            input(type="radio", name="Gender", value="1")
+                                            span Male
+                                        label
+                                            input(type="radio", name="Gender", value="2")
+                                            span Female
+
+                        .dsx-kyc-item-action
+                            button.dsx-button.-primary.-animated(type='button')
+                                span Save
+                                +svgsprite("chevron-right")
+
+                    .dsx-kyc-item
+                        .dsx-kyc-item-content.-secondary
+                            .dsx-kyc-item-content-residence
+                                .dsx-kyc-item-content-residence-left
+                                    .dsx-kyc-item-content-residence-left-content.-secondary
+                                        .dsx-kyc-item-content-residence-left-content-icon.-error
+                                            +svgsprite("exclamation")
+
+                                        .dsx-kyc-item-content-residence-left-content-title 49_NTElsa…cument.jpg
+
+                                        .dsx-kyc-item-content-residence-left-content-subtitle.-error Wrong statement please attach another one
+
+                                    .dsx-kyc-item-content-residence-left-description
+                                        | Upload a JPG, PNG
+                                        br
+                                        | or PDF file. Max. 30MB
+
+                                    a.dsx-kyc-item-content-residence-left-additional-upload.-primary
+                                        +svgsprite("upload")
+
+                                .dsx-kyc-item-content-residence-right
+                                    .dsx-kyc-item-content-residence-right-title
+                                        span.-bold Proof &nbsp;
+                                        span of residence
+
+                                    .dsx-kyc-item-content-residence-right-subtitle
+                                        span Must be dated within the last 3 months and must show the same name and address as the one on your DSX account
+
+                                    .dsx-enumeration.-secondary
+                                        ul.dsx-enumeration-list
+                                            li
+                                                span.dsx-enumeration-list-header Utility bill (i.e. telephone, gas, electric) Please note that a mobile phone bill will not be accepted as a valid Proof of Residence
+                                            li
+                                                span.dsx-enumeration-list-header Recent bank or credit card statement
+                                            li
+                                                span.dsx-enumeration-list-header Council tax statement
+                                            li
+                                                span.dsx-enumeration-list-header Inland Revenue Tax Assessment
+                                            li
+                                                span.dsx-enumeration-list-header Signed Lease Agreement still within term
+
+                                    .dsx-kyc-item-content-residence-right-action
+                                        a Examples
+
+                            .dsx-kyc-item-action
+                                button.dsx-button.-primary.-animated(type='button')
+                                    span Save
+                                    +svgsprite("chevron-right")
+
+                    .dsx-kyc-item
+                        .dsx-kyc-item-title.-success
+                            +svgsprite("check")
+                            h2 Residential address
+                        .dsx-kyc-item-content
+                            .dsx-kyc-item-content-row
+                                .row
+                                    .col-xs-6
+                                        .dsx-form-input-container.-secondary
+                                            input.dsx-form-input.-transparent(placeholder="ADRESS")
+
+                                    .col-xs-6
+                                        .dsx-form-input-container.-secondary
+                                            input.dsx-form-input.-transparent(placeholder="CITY")
+
+                            .dsx-kyc-item-content-row
+                                .row
+                                    .col-xs-6
+                                        fieldset.dsx-form-input-container.-secondary
+                                            .dsx-dropdown.-tertiary
+                                                a.dsx-dropdown-toggle.-unchosen(data-toggle='dropdown', aria-haspopup='true', aria-expanded='true')
+                                                    | Select
+                                                    span.caret
+                                                ul.dsx-dropdown-menu
+                                                    li
+                                                        a.dsx-dropdown-menu-card(href='#') 120120
+                                                    li
+                                                        a.dsx-dropdown-menu-card(href='#') 120130
+                                                    li
+                                                        a.dsx-dropdown-menu-card(href='#') 130110
+                                                    li
+                                                        a.dsx-dropdown-menu-card(href='#') 130110
+                                                    li
+                                                        a.dsx-dropdown-menu-card(href='#') 130110
+                                            legend.dsx-form-input-container-label postcode
+
+                                    .col-xs-6
+                                        fieldset.dsx-form-input-container.-secondary
+                                            .dsx-dropdown.-tertiary
+                                                a.dsx-dropdown-toggle.-unchosen(data-toggle='dropdown', aria-haspopup='true', aria-expanded='true')
+                                                    | Select
+                                                    span.caret
+                                                ul.dsx-dropdown-menu
+                                                    li
+                                                        a.dsx-dropdown-menu-card(href='#') Russian Federation
+                                                    li
+                                                        a.dsx-dropdown-menu-card(href='#') United Kingdom
+                                                    li
+                                                        a.dsx-dropdown-menu-card(href='#') Brasil lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                                    li
+                                                        a.dsx-dropdown-menu-card(href='#') Spain
+                                                    li
+                                                        a.dsx-dropdown-menu-card(href='#') Netherlands
+                                            legend.dsx-form-input-container-label country
+
+                        .dsx-kyc-item-action
+                            button.dsx-button.-primary.-animated(type='button')
+                                span Save
+                                +svgsprite("chevron-right")
+
+                    .dsx-kyc-item
+                        .dsx-kyc-item-content.-secondary
+                            .dsx-kyc-item-content-residence
+                                .dsx-kyc-item-content-residence-left
+                                    .dsx-kyc-item-content-residence-left-content
+                                        .dsx-kyc-item-content-residence-left-content-files
+                                            ul.dsx-kyc-item-content-residence-left-content-files-list
+                                                li.dsx-kyc-item-content-residence-left-content-files-list-item.-success
+                                                    span.dsx-kyc-item-content-residence-left-content-files-list-item-icon
+                                                        +svgsprite("check-bold")
+
+                                                    .dsx-kyc-item-content-residence-left-content-files-list-item-file
+                                                        .dsx-kyc-item-content-residence-left-content-files-list-item-file-title 49_NT…ment.jpg
+                                                        .dsx-kyc-item-content-residence-left-content-files-list-item-file-subtitle 1.25 MB
+
+                                                    span.dsx-kyc-item-content-residence-left-content-files-list-item-delete
+                                                        a
+                                                            +svgsprite("times")
+
+                                                li.dsx-kyc-item-content-residence-left-content-files-list-item.-error
+                                                    span.dsx-kyc-item-content-residence-left-content-files-list-item-icon
+                                                        +svgsprite("exclamation")
+
+                                                    .dsx-kyc-item-content-residence-left-content-files-list-item-file
+                                                        .dsx-kyc-item-content-residence-left-content-files-list-item-file-title 54_NT…ment.jpg
+                                                        .dsx-kyc-item-content-residence-left-content-files-list-item-file-subtitle Wrong statment please attach another one
+
+                                                    span.dsx-kyc-item-content-residence-left-content-files-list-item-delete
+                                                        a
+                                                            +svgsprite("times")
+
+                                                li.dsx-kyc-item-content-residence-left-content-files-list-item.-loading
+                                                    span.dsx-kyc-item-content-residence-left-content-files-list-item-icon
+
+                                                    .dsx-kyc-item-content-residence-left-content-files-list-item-file
+                                                        .dsx-kyc-item-content-residence-left-content-files-list-item-file-title 59_NT…ment.jpg
+
+                                                    span.dsx-kyc-item-content-residence-left-content-files-list-item-delete
+                                                        a
+                                                            +svgsprite("times")
+
+                                    .dsx-kyc-item-content-residence-left-description
+                                        | Upload a JPG, PNG
+                                        br
+                                        | or PDF file. Max. 30MB
+
+                                    a.dsx-kyc-item-content-residence-left-additional-upload.-primary
+                                        +svgsprite("upload")
+
+                                .dsx-kyc-item-content-residence-right
+                                    .dsx-kyc-item-content-residence-right-title
+                                        span.-bold Proof &nbsp;
+                                        span of residence
+
+                                    .dsx-kyc-item-content-residence-right-subtitle
+                                        span Must be dated within the last 3 months and must show the same name and address as the one on your DSX account
+
+                                    .dsx-enumeration.-secondary
+                                        ul.dsx-enumeration-list
+                                            li
+                                                span.dsx-enumeration-list-header Utility bill (i.e. telephone, gas, electric) Please note that a mobile phone bill will not be accepted as a valid Proof of Residence
+                                            li
+                                                span.dsx-enumeration-list-header Recent bank or credit card statement
+                                            li
+                                                span.dsx-enumeration-list-header Council tax statement
+                                            li
+                                                span.dsx-enumeration-list-header Inland Revenue Tax Assessment
+                                            li
+                                                span.dsx-enumeration-list-header Signed Lease Agreement still within term
+
+                                    .dsx-kyc-item-content-residence-right-action
+                                        a Examples
+
+                        .dsx-kyc-item-action
+                            button.dsx-button.-primary.-animated(type='button')
+                                span Save
+                                +svgsprite("chevron-right")
+
+                .dsx-right-sidebar
+                    .dsx-right-sidebar-item
+                        .dsx-right-sidebar-item-header
+                            .dsx-right-sidebar-item-header-title.-primary
+                                a(href="") balance
+                        .dsx-right-sidebar-item-content
+                            ul.dsx-right-sidebar-item-content-list
+                                li
+                                    span.dsx-right-sidebar-item-content-list-left BTC
+                                    span.dsx-right-sidebar-item-content-list-right 123.696325111988
+                                li
+                                    span.dsx-right-sidebar-item-content-list-left LTC
+                                    span.dsx-right-sidebar-item-content-list-right 93 707.29220
+                                li
+                                    span.dsx-right-sidebar-item-content-list-left USD
+                                    span.dsx-right-sidebar-item-content-list-right 100 247.10
+                                li
+                                    span.dsx-right-sidebar-item-content-list-left EUR
+                                    span.dsx-right-sidebar-item-content-list-right 2 345.34
+                                li
+                                    span.dsx-right-sidebar-item-content-list-left RUB
+                                    span.dsx-right-sidebar-item-content-list-right 3 245.43
+
+                    .dsx-right-sidebar-item.-last
+                        .dsx-right-sidebar-item-header
+                            .dsx-right-sidebar-item-header-title.-primary
+                                a(href="") Verification
+                        .dsx-right-sidebar-item-content
+                            ul.dsx-right-sidebar-item-content-list
+                                li
+                                    span.dsx-right-sidebar-item-content-list-left.-checked
+                                        | Contact details
+                                        +svgsprite("check")
+                                li
+                                    span.dsx-right-sidebar-item-content-list-left.-checked
+                                        | Personal information
+                                        +svgsprite("check")
+                                li
+                                    span.dsx-right-sidebar-item-content-list-left.-checked
+                                        | Residential address
+                                        +svgsprite("check")
+
+                                li.dsx-right-sidebar-item-content-list-action
+                                    button.dsx-button.-success(type="button" data-toggle="modal" data-target="#verify") get verified
+
+    #verify.dsx-modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
+        .dsx-modal-dialog(role='document')
+
+            a.dsx-modal-close(data-dismiss='modal', aria-label='Close')
+                span(aria-hidden='true')
+                    +svgsprite("times-thin")
+
+            .dsx-modal-content
+                .dsx-modal-content-title
+                    span You are &nbsp;
+                    span.-bold ready to verify &nbsp;
+                    span account
+
+                .dsx-modal-content-subtitle Bushwick meh Blue Bottle pork belly mustache skateboard 3 wolf moon. Actually beard single-origin.
+
+                .dsx-modal-content-action
+                    button.dsx-button.-primary(type='button' data-dismiss='modal', aria-label='Close')
+                        span get verified
+
+    #email.dsx-modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
+        .dsx-modal-dialog(role='document')
+            a.dsx-modal-close(data-dismiss='modal', aria-label='Close')
+                span(aria-hidden='true')
+                    +svgsprite("times-thin")
+
+            .dsx-modal-header
+                .dsx-modal-header-title
+                    h2 Set New Email
+
+            .dsx-modal-content
+                .dsx-form-input-container.-secondary
+                    input.dsx-form-input.-transparent(placeholder="EMAIL")
+
+                .dsx-modal-content-action
+                    button.dsx-button.-primary.-animated(type="button" data-toggle="modal" data-dismiss="modal" data-target="#email-changed")
+                        span Done
+                        +svgsprite("chevron-right")
+
+    #email-changed.dsx-modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
+        .dsx-modal-dialog.-secondary(role='document')
+            a.dsx-modal-close(data-dismiss='modal', aria-label='Close')
+                span(aria-hidden='true')
+                    +svgsprite("times-thin")
+
+            .dsx-modal-header
+                .dsx-modal-header-title
+                    h2 EMAIL WAS CHANGED
+
+            .dsx-modal-content
+                .dsx-form-input-container.-secondary
+                    input.dsx-form-input.-transparent(placeholder="EMAIL")
+
+                .dsx-modal-content-action
+                    button.dsx-button.-primary.-animated(type="button" data-toggle="modal" data-dismiss="modal" data-target="#email-changed")
+                        span Done
+                        +svgsprite("chevron-right")
+
+    #phone.dsx-modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
+        .dsx-modal-dialog(role='document')
+            a.dsx-modal-close(data-dismiss='modal', aria-label='Close')
+                span(aria-hidden='true')
+                    +svgsprite("times-thin")
+
+            .dsx-modal-header
+                .dsx-modal-header-title
+                    h2 Verify Phone Number
+
+            .dsx-modal-content
+                .dsx-form-input-container.-secondary
+                    input.dsx-form-input.-transparent(placeholder="EMAIL")
+
+                .dsx-modal-content-action
+                    button.dsx-button.-primary.-animated(type='button' data-dismiss='modal', aria-label='Close')
+                        span Done
+                        +svgsprite("chevron-right")

@@ -1,0 +1,267 @@
+.dsx-login{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 925px;
+    @media only screen and (max-width: $screen-xs){
+        padding-top: 40px;
+    }
+
+    &.-secondary{
+        @media only screen and (max-width: $screen-sm){
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: inline-block;
+            padding-top: 0;
+            position: absolute;
+        }
+    }
+
+    &-header{
+        margin-bottom: 18px;
+
+        @media only screen and (min-width: $screen-sm){
+            margin-bottom: 32px;
+        }
+
+        &.-secondary{
+            position: relative;
+            padding-left: 85px;
+
+            @media only screen and (min-width: $screen-sm){
+                padding-left: 164px;
+            }
+        }
+
+        &-icon{
+            width: 64px;
+            height: 64px;
+            border: 1px solid rgba(255,255,255,.2);
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            margin-top: -32px;
+            left: 0;
+
+            @media only screen and (min-width: $screen-sm){
+                width: 104px;
+                height: 104px;
+                margin-top: -52px;
+            }
+
+            svg{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: $color-base;
+                font-size: 13px;
+            }
+        }
+
+        &-title{
+            margin-right: 24px;
+            color: $color-base;
+            display: inline-block;
+
+            @media only screen and (min-width: $screen-sm){
+                margin-right: 60px;
+                display: inline-block;
+            }
+
+            a{
+                color: $color-base;
+
+                &:hover, &:focus{
+                    text-decoration: none;
+                    color: $color-base;
+                }
+            }
+
+            &.-left-margin{
+                margin-right: 0;
+                margin-left: 60px;
+            }
+
+
+
+            &-action{
+
+                a{
+                    display: table;
+                }
+
+                svg{
+                    margin-right: 25px;
+                    //display: inline-block;
+                    display: table-cell;
+                    vertical-align: baseline;
+                    transition: all 0.2s;
+                }
+
+                h2 {
+                    //display: inline-block;
+                    display: table-cell;
+                    vertical-align: baseline;
+
+                    font-size: 32px;
+                    line-height: 38px;
+                    letter-spacing: -0.69px;
+
+                    @media only screen and (min-width: $screen-sm){
+                        font-size: 40px;
+                        letter-spacing: -0.5px;
+                    }
+                }
+
+                &:hover{
+                    svg{
+                        margin-left: -15px;
+                        margin-right: 40px;
+                    }
+                }
+            }
+        }
+
+        &-subtitle{
+            display: inline-block;
+
+            a{
+                color: rgba(255,255,255,.4);
+                transition: all 0.2s;
+
+                &:hover, &:focus{
+                    text-decoration: none;
+                    color: $color-base;
+                }
+            }
+        }
+
+        &-done-message{
+            color: rgba(255,255,255,.5);
+            font-weight: lighter;
+            font-size: 12px;
+            letter-spacing: 0.43px;
+            line-height: 19px;
+
+            @media only screen and (min-width: $screen-sm){
+                line-height: 27px;
+                letter-spacing: 0.38px;
+                font-size: 20px;
+            }
+        }
+    }
+
+    &-action{
+
+        @media only screen and (min-width: $screen-sm){
+            margin-bottom: 23px;
+        }
+    }
+
+    &-email{
+        margin-bottom: 23px;
+
+        @media only screen and (min-width: $screen-sm){
+            margin-bottom: 40px;
+        }
+
+
+        .dsx-form-input-container{
+            margin-bottom: 23px;
+
+            @media only screen and (min-width: $screen-sm){
+                margin-bottom: 30px;
+                max-width: 530px;
+            }
+        }
+    }
+
+    &-policy{
+        margin-bottom: 20px;
+
+        @media only screen and (min-width: $screen-sm){
+            margin-bottom: 50px;
+        }
+
+        .dsx-checkbox{
+            margin-bottom: 20px;
+
+            @media only screen and (min-width: $screen-sm){
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    .dsx-enumeration{
+        margin-bottom: 75px;
+    }
+
+    &-agreement{
+        color: rgba(255,255,255, .34);
+        font-size: 12px;
+        letter-spacing: 0.43px;
+        line-height: 19px;
+
+        a{
+            color: rgba(255,255,255, .34);
+            display: inline-block;
+            border-bottom: 1px solid rgba(255,255,255, .34);
+            transition: all 0.2s;
+
+            &:hover, &:focus{
+                border-bottom: 1px solid $color-base;
+                color: $color-base;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.dsx-social{
+    margin-bottom: 20px;
+
+    @media only screen and (min-width: $screen-sm){
+        margin-bottom: 40px;
+    }
+
+    &-list{
+        li{
+            display: inline-block;
+            margin-right: 16px;
+
+            @media only screen and (min-width: $screen-sm){
+                margin-right: 23px;
+            }
+
+            a{
+                width: 48px;
+                height: 48px;
+                display: inline-block;
+                border-radius: 50%;
+                border: 1px solid rgba(255,255,255,.2);
+                color: $color-base;
+                position: relative;
+
+                transition: all 0.2s;
+
+                @media only screen and (min-width: $screen-sm){
+                    width: 56px;
+                    height: 56px;
+                }
+
+                &:hover, &:focus{
+                    border: 1px solid $color-base;
+                    text-decoration: none;
+                }
+
+                svg{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+- var LOGIN = false;
+
+doctype html
+html(lang='en', class="no-js")
+    head
+        include head.jade
+    body
+        include /_includes/body-background
+        include /_includes/mixins/svgsprite
+
+        if LOGIN
+            include /_includes/navbar-login
+        else if UNLOGGED
+            include /_includes/navbar-unlogged
+        else
+            include /_includes/navbar
+
+
+
+        block content
+            span no content provied
+
+        include scripts.jade

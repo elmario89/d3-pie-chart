@@ -1,0 +1,316 @@
+@font-face {
+    font-family: "dsx-icons";
+    src: url('../fonts/icons/dsx-icons.eot');
+    src: url('../fonts/icons/dsx-icons.eot?#iefix') format('eot'),
+    //url('../fonts/icons/dsx-icons.woff2') format('woff2'),
+    url('../fonts/icons/dsx-icons.woff') format('woff'),
+    url('../fonts/icons/dsx-icons.ttf') format('truetype'),
+    url('../fonts/icons/dsx-icons.svg#dsx-icons') format('svg');
+}
+
+@mixin icon-styles {
+    font-family: "dsx-icons";
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    // speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+    text-decoration: none;
+    text-transform: none;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.dsx-icon {
+    @include icon-styles;
+}
+
+@function icon-char($filename) {
+    $char: "";
+    
+    @if $filename == apple {
+        $char: "\E001";
+    }
+    @if $filename == arrow-down {
+        $char: "\E002";
+    }
+    @if $filename == arrow-left {
+        $char: "\E003";
+    }
+    @if $filename == arrow-right {
+        $char: "\E004";
+    }
+    @if $filename == arrow-up {
+        $char: "\E005";
+    }
+    @if $filename == bank {
+        $char: "\E006";
+    }
+    @if $filename == bell {
+        $char: "\E007";
+    }
+    @if $filename == calendar {
+        $char: "\E008";
+    }
+    @if $filename == caret-down {
+        $char: "\E009";
+    }
+    @if $filename == caret-left {
+        $char: "\E00A";
+    }
+    @if $filename == caret-right {
+        $char: "\E00B";
+    }
+    @if $filename == caret-up {
+        $char: "\E00C";
+    }
+    @if $filename == change {
+        $char: "\E00D";
+    }
+    @if $filename == check-bold {
+        $char: "\E00E";
+    }
+    @if $filename == check-thin {
+        $char: "\E00F";
+    }
+    @if $filename == check {
+        $char: "\E010";
+    }
+    @if $filename == chevron-down {
+        $char: "\E011";
+    }
+    @if $filename == chevron-left {
+        $char: "\E012";
+    }
+    @if $filename == chevron-right {
+        $char: "\E013";
+    }
+    @if $filename == chevron-up {
+        $char: "\E014";
+    }
+    @if $filename == clock {
+        $char: "\E015";
+    }
+    @if $filename == clone {
+        $char: "\E016";
+    }
+    @if $filename == dsx {
+        $char: "\E017";
+    }
+    @if $filename == envelope {
+        $char: "\E018";
+    }
+    @if $filename == epayments {
+        $char: "\E019";
+    }
+    @if $filename == exclamation {
+        $char: "\E01A";
+    }
+    @if $filename == facebook {
+        $char: "\E01B";
+    }
+    @if $filename == google-play {
+        $char: "\E01C";
+    }
+    @if $filename == google-plus {
+        $char: "\E01D";
+    }
+    @if $filename == info-circle {
+        $char: "\E01E";
+    }
+    @if $filename == link {
+        $char: "\E01F";
+    }
+    @if $filename == long-arrow-down {
+        $char: "\E020";
+    }
+    @if $filename == long-arrow-left {
+        $char: "\E021";
+    }
+    @if $filename == long-arrow-right {
+        $char: "\E022";
+    }
+    @if $filename == long-arrow-up {
+        $char: "\E023";
+    }
+    @if $filename == pencil {
+        $char: "\E024";
+    }
+    @if $filename == plus {
+        $char: "\E025";
+    }
+    @if $filename == refresh {
+        $char: "\E026";
+    }
+    @if $filename == spinner {
+        $char: "\E027";
+    }
+    @if $filename == star {
+        $char: "\E028";
+    }
+    @if $filename == times-thin {
+        $char: "\E029";
+    }
+    @if $filename == times {
+        $char: "\E02A";
+    }
+    @if $filename == twitter {
+        $char: "\E02B";
+    }
+    @if $filename == upload {
+        $char: "\E02C";
+    }
+    @if $filename == user {
+        $char: "\E02D";
+    }
+    @if $filename == vk {
+        $char: "\E02E";
+    }
+
+    @return $char;
+}
+
+@mixin icon($filename, $insert: before) {
+    &:#{$insert} {
+        content: icon-char($filename);
+    }
+}
+
+.dsx-icon.-apple {
+    @include icon(apple);
+}
+.dsx-icon.-arrow-down {
+    @include icon(arrow-down);
+}
+.dsx-icon.-arrow-left {
+    @include icon(arrow-left);
+}
+.dsx-icon.-arrow-right {
+    @include icon(arrow-right);
+}
+.dsx-icon.-arrow-up {
+    @include icon(arrow-up);
+}
+.dsx-icon.-bank {
+    @include icon(bank);
+}
+.dsx-icon.-bell {
+    @include icon(bell);
+}
+.dsx-icon.-calendar {
+    @include icon(calendar);
+}
+.dsx-icon.-caret-down {
+    @include icon(caret-down);
+}
+.dsx-icon.-caret-left {
+    @include icon(caret-left);
+}
+.dsx-icon.-caret-right {
+    @include icon(caret-right);
+}
+.dsx-icon.-caret-up {
+    @include icon(caret-up);
+}
+.dsx-icon.-change {
+    @include icon(change);
+}
+.dsx-icon.-check-bold {
+    @include icon(check-bold);
+}
+.dsx-icon.-check-thin {
+    @include icon(check-thin);
+}
+.dsx-icon.-check {
+    @include icon(check);
+}
+.dsx-icon.-chevron-down {
+    @include icon(chevron-down);
+}
+.dsx-icon.-chevron-left {
+    @include icon(chevron-left);
+}
+.dsx-icon.-chevron-right {
+    @include icon(chevron-right);
+}
+.dsx-icon.-chevron-up {
+    @include icon(chevron-up);
+}
+.dsx-icon.-clock {
+    @include icon(clock);
+}
+.dsx-icon.-clone {
+    @include icon(clone);
+}
+.dsx-icon.-dsx {
+    @include icon(dsx);
+}
+.dsx-icon.-envelope {
+    @include icon(envelope);
+}
+.dsx-icon.-epayments {
+    @include icon(epayments);
+}
+.dsx-icon.-exclamation {
+    @include icon(exclamation);
+}
+.dsx-icon.-facebook {
+    @include icon(facebook);
+}
+.dsx-icon.-google-play {
+    @include icon(google-play);
+}
+.dsx-icon.-google-plus {
+    @include icon(google-plus);
+}
+.dsx-icon.-info-circle {
+    @include icon(info-circle);
+}
+.dsx-icon.-link {
+    @include icon(link);
+}
+.dsx-icon.-long-arrow-down {
+    @include icon(long-arrow-down);
+}
+.dsx-icon.-long-arrow-left {
+    @include icon(long-arrow-left);
+}
+.dsx-icon.-long-arrow-right {
+    @include icon(long-arrow-right);
+}
+.dsx-icon.-long-arrow-up {
+    @include icon(long-arrow-up);
+}
+.dsx-icon.-pencil {
+    @include icon(pencil);
+}
+.dsx-icon.-plus {
+    @include icon(plus);
+}
+.dsx-icon.-refresh {
+    @include icon(refresh);
+}
+.dsx-icon.-spinner {
+    @include icon(spinner);
+}
+.dsx-icon.-star {
+    @include icon(star);
+}
+.dsx-icon.-times-thin {
+    @include icon(times-thin);
+}
+.dsx-icon.-times {
+    @include icon(times);
+}
+.dsx-icon.-twitter {
+    @include icon(twitter);
+}
+.dsx-icon.-upload {
+    @include icon(upload);
+}
+.dsx-icon.-user {
+    @include icon(user);
+}
+.dsx-icon.-vk {
+    @include icon(vk);
+}

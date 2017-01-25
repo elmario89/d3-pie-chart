@@ -1,0 +1,22 @@
+extends /_includes/layout.jade
+
+block title
+    title DSX
+    meta(name="description", content="")
+
+    - LOGIN = true;
+
+block content
+    .dsx-wrap-outer
+        .dsx-wrap
+            .dsx-wrap-inner.-tertiary
+                .dsx-login
+                    .dsx-login-header.-secondary
+                        .dsx-login-header-title
+                            h1 Email verification
+                        .dsx-login-header-done-message We sent you email with link to
+                            br
+                            | complete redistration
+
+                        .dsx-login-header-icon
+                            +svgsprite("envelope")

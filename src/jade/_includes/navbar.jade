@@ -1,0 +1,23 @@
+.dsx-navbar.-visible
+    .dsx-navbar-bg
+        .dsx-navbar-bg-inner
+    .dsx-navbar-inner
+        .dsx-navbar-left
+            .dsx-navbar-logo
+                a(href="/")
+                    +svgsprite("dsx")
+            .dsx-navbar-nav
+                .dsx-navbar-nav-menu
+                    a.dsx-navbar-nav-menu-item.-active Exchange
+                    a.dsx-navbar-nav-menu-item Trade
+                    a.dsx-navbar-nav-menu-item Transactions
+                    a.dsx-navbar-nav-menu-item Support
+        .dsx-navbar-right
+            .dsx-navbar-user
+                .dsx-navbar-user-nav
+                    a.dsx-navbar-user-nav-item.-notify
+                        +svgsprite("bell")
+                        .verify-message
+                            span Your account is not verified
+                    a.dsx-navbar-user-nav-item
+                        +svgsprite("user")

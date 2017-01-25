@@ -1,0 +1,73 @@
+.dsx-wrap {
+    height:100%;
+
+    &-outer{
+        height: 100%;
+
+        &.-primary{
+            padding-top: 90px;
+
+            @media only screen and (min-width: $screen-sm){
+                padding-top: 120px;
+            }
+        }
+    }
+
+    &-inner{
+        position: relative;
+        height: 100%;
+
+        &.-primary{
+
+        }
+
+        &.-tertiary{
+            padding: 0 18px;
+
+            @media only screen and (min-width: $screen-sm){
+                padding-left: 60px;
+            }
+
+            @media only screen and (min-width: $screen-md){
+                padding-left: 160px;
+            }
+        }
+
+        //@media only screen and (min-width: $screen-sm){
+        //    padding-left: 60px;
+        //}
+        //
+        //@media only screen and (min-width: $screen-md){
+        //    padding-left: 160px;
+        //}
+
+
+        @media only screen and (min-width: $screen-lg){
+            &.-primary{
+                padding-top: 60px;
+                padding-left: 60px;
+                padding-right: 268px;
+            }
+
+            &.-secondary{
+                padding-top: 60px;
+                padding-left: 60px;
+                padding-right: 540px;
+            }
+
+            &.-tertiary{
+                padding-left: 160px;
+                height: 100%;
+            }
+        }
+    }
+}
+
+.dsx-content {
+    height:100%;
+    overflow:auto;
+}
+
+.dsx-container {
+    padding:0 190px 0 160px;
+}

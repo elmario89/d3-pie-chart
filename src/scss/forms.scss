@@ -1,0 +1,570 @@
+.dsx-form {
+
+    &-group {
+        margin-bottom:25px;
+    }
+
+    &-submit {
+        margin:40px 0 0 0;
+
+        &.-right {
+            text-align:right;
+        }
+
+        &.-sm {
+            margin:20px 0 0 0;
+        }
+    }
+
+    &-input {
+        width:100%;
+        padding:20px;
+
+        color:$color-text;
+        background:$color-fill;
+        border:1px $color-disabled solid;
+
+        font-size:16px;
+        font-weight:normal;
+        letter-spacing:0.27px;
+        line-height:14px;
+
+        &:hover {
+            background:lighten($color-fill, 0.5%);
+            border-color:darken($color-disabled, 5%);
+        }
+
+        &:focus {
+            background:lighten($color-fill, 0.5%);
+            border-color:darken($color-disabled, 10%);
+        }
+
+        &.-flat {
+            padding:8px 0;
+
+            color: $color-primary;
+            background:none;
+            border: 0;
+            border-bottom: 1px rgba($color-primary, 0.1) solid;
+
+            font-size: 18px;
+            font-weight: normal;
+            letter-spacing: 0.3px;
+            line-height: 1;
+
+            &.-spaced {
+                padding-left:65px;
+                padding-right:65px;
+            }
+
+            &:hover {
+                border-bottom: 1px rgba($color-primary, 0.2) solid;
+            }
+
+            &:focus {
+                border-bottom: 1px $color-primary solid;
+            }
+
+            &.-secondary{
+                font-size: 39px;
+                color: $color-black;
+                font-family: $font-family-tertiary;
+                padding: 0;
+
+              &:focus{
+                   color: $color-primary;
+              }
+           }
+        }
+
+        &.-transparent{
+            background-color: transparent;
+            border: none;
+            font-size: 17px;
+            font-family: $font-family-secondary;
+            letter-spacing: 0.61px;
+            padding: 18px 22px 16px 0;
+
+            &:hover{
+                cursor: pointer;
+            }
+        }
+
+        &-container{
+            position: relative;
+            padding-left: 22px;
+
+            transition: all 0.2s;
+
+            &.-padded{
+                padding-right: 80px;
+            }
+
+            &-label{
+                font-size: 13px;
+                color: rgba(255,255,255,.2);
+                letter-spacing: 0.5px;
+                text-transform: uppercase;
+                text-align: left !important;
+                width:auto;
+                padding:0 5px;
+                border-bottom:none;
+                margin-bottom: -6px;
+
+                transition: all 0.2s;
+            }
+
+            &.-primary{
+                border: 1px solid rgba(255,255,255,.2);
+
+                input{
+                    color: $color-base;
+
+                    &::-webkit-input-placeholder {color:rgba(255,255,255,.4); font-family: $font-family;font-size: 13px; letter-spacing: 0.5px;}
+                    &::-moz-placeholder          {color:rgba(255,255,255,.4); font-family: $font-family;font-size: 13px; letter-spacing: 0.5px;}
+                    &:-moz-placeholder           {color:rgba(255,255,255,.4); font-family: $font-family;font-size: 13px; letter-spacing: 0.5px;}
+                    &:-ms-input-placeholder      {color:rgba(255,255,255,.4); font-family: $font-family;font-size: 13px; letter-spacing: 0.5px;}
+
+                    &:focus + legend {
+                        color: $color-base;
+                    }
+                }
+
+                &.-focused{
+                    border: 1px solid $color-base;
+                }
+
+                &:hover{
+                    border: 1px solid $color-base;
+
+                    legend {
+                        color: $color-base;
+                    }
+
+                    .dsx-form-input-container-calendar{
+                        color: $color-base;
+                    }
+                }
+            }
+
+            &.-primary &-label{
+                color: rgba(255,255,255, .4);
+            }
+
+            &.-secondary{
+                border: 1px solid rgba(0,0,0,.15);
+
+                &.-disabled{
+                    border: 1px solid rgba(0,0,0,.15) !important;
+
+                    input{
+                        color: rgba(0,0,0,.4) !important;
+
+                        &:hover{
+                            cursor: auto;
+                        }
+                    }
+
+                    legend{
+                        color: rgba(0,0,0,.4) !important;
+                    }
+                }
+
+                input{
+                    color: $color-black;
+
+                    &::-webkit-input-placeholder {color:rgba(0,0,0,.4); font-family: $font-family;font-size: 13px; letter-spacing: 0.5px;}
+                    &::-moz-placeholder          {color:rgba(0,0,0,.4); font-family: $font-family;font-size: 13px; letter-spacing: 0.5px;}
+                    &:-moz-placeholder           {color:rgba(0,0,0,.4); font-family: $font-family;font-size: 13px; letter-spacing: 0.5px;}
+                    &:-ms-input-placeholder      {color:rgba(0,0,0,.4); font-family: $font-family;font-size: 13px; letter-spacing: 0.5px;}
+
+                    &:focus + legend {
+                        color: rgba(0,0,0,.5);
+                    }
+                }
+
+                &.-focused{
+                    border: 1px solid rgba(0,0,0,.4);
+                }
+
+                &:hover{
+                    border: 1px solid rgba(0,0,0,.4);
+
+                    legend {
+                        color: rgba(0,0,0,.5);
+                    }
+
+                    .dsx-form-input-container-calendar{
+                        color: $color-black;
+                    }
+                }
+            }
+
+            &.-secondary &-label{
+                color: rgba(0,0,0, .4)
+            }
+
+            &-message{
+                position: absolute;
+                right: 24px;
+                top: 50%;
+                transform: translateY(-50%);
+
+
+                &.-primary{
+                    font-size: 13px;
+                    letter-spacing: 0.5px;
+                    color: rgba(255,255,255,.4);
+                }
+
+                &.-secondary{
+                    font-size: 14px;
+
+                    a{
+                        letter-spacing: 0.5px;
+                        color: $color-link;
+                        font-weight: bold;
+
+                        &:focus, &:hover{
+                            text-decoration: none;
+                        }
+
+                        &.-success{
+                            margin-right: 20px;
+                            color: $color-success;
+                        }
+                    }
+                }
+
+                svg{
+                    width: 14px;
+                    height: 11px;
+                    color: $color-base;
+                }
+            }
+
+            &-calendar{
+                display: inline-block;
+                width: 100%;
+                padding: 17px 20px 17px 0;
+
+                transition: all 0.2s;
+
+                svg{
+                    float: right;
+                }
+            }
+
+            &.-primary &-calendar{
+                color: rgba(255,255,255,.4)
+            }
+
+            &.-secondary &-calendar{
+                color: rgba(0,0,0,.4);
+            }
+        }
+
+        &::-webkit-input-placeholder {color:rgba(255,255,255,.4);}
+        &::-moz-placeholder          {color:rgba(255,255,255,.4);}
+        &:-moz-placeholder           {color:rgba(255,255,255,.4);}
+        &:-ms-input-placeholder      {color:rgba(255,255,255,.4);}
+    }
+
+    &-text {
+        color:$color-link;
+        font-size:16px;
+        font-weight:normal;
+        letter-spacing:0.27px;
+        line-height:23px;
+    }
+
+    &-textarea {
+        height:55px;
+        width:100%;
+        padding:15px 20px;
+
+        color:$color-text;
+        background:$color-fill;
+        border:1px $color-disabled solid;
+
+        font-size:16px;
+        font-weight:normal;
+        letter-spacing:0.27px;
+        line-height:23px;
+        text-align:left;
+
+        resize:none;
+
+        transition:all 0.2s;
+
+        &:hover {
+            background:lighten($color-fill, 0.5%);
+            border-color:darken($color-disabled, 5%);
+        }
+
+        &:focus {
+            height:115px;
+            background:lighten($color-fill, 0.5%);
+            border-color:darken($color-disabled, 10%);
+        }
+
+        &.-lg {
+            height:267px;
+        }
+    }
+}
+
+.dsx-checkbox {
+
+    &.-secondary{
+        .dsx-checkbox-box{
+            position: absolute;
+        }
+
+        .dsx-checkbox-text{
+            padding-left: 17px;
+        }
+    }
+
+    label {
+        padding-left: 34px;
+
+        .dsx-checkbox-box {
+            cursor: pointer;
+            position: absolute;
+            left: 0;
+            display: inline-block;
+            width: 19px;
+            height: 19px;
+
+            border: 1px solid rgba(255,255,255, .34);
+
+            font-size:9px;
+            line-height:15px;
+            text-align:center;
+            vertical-align: middle;
+
+            transition:all 0.2s;
+
+            &:after {
+                @include icon-styles;
+                content: icon-char(check-bold);
+                display: none;
+                color: $color-base;
+                transition:all 0.2s;
+            }
+
+            &:hover{
+                border: 1px solid $color-base;
+            }
+        }
+
+        .dsx-checkbox-text {
+            cursor:pointer;
+            //display:inline-block;
+
+            font-size:12px;
+            letter-spacing:0.43px;
+            line-height:19px;
+            vertical-align: middle;
+            font-weight: normal;
+            color: rgba(255,255,255, .34);
+        }
+
+        .dsx-checkbox-link{
+            cursor:pointer;
+            color: rgba(255,255,255, .34);
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 19px;
+            padding-bottom: 1px;
+            border-bottom: 1px solid rgba(255,255,255, .34);
+
+            transition:all 0.2s;
+
+            &:hover, &:focus{
+                color: $color-base;
+                text-decoration: none;
+                border-bottom: 1px solid $color-base;
+            }
+        }
+
+        input {
+            position: absolute;
+            padding: 0;
+            margin: 0;
+            z-index: -999;
+            left: -9999px;
+            opacity:0;
+
+            &:checked {
+                + .dsx-checkbox-box:after {
+                    display: inline-block;
+                }
+
+                + .dsx-checkbox-box{
+                    border: 1px solid rgba(255,255,255, .34);
+
+                    &:hover{
+                        border: 1px solid $color-base;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.dsx-form {
+
+    &-radio{
+        width: 100%;
+
+        background: none;
+        border: none;
+
+        font-size: 16px;
+
+        transition: all 0.2s;
+
+        &.-secondary{
+            .mt-radio-items{
+                label{
+                    padding: 10px 0;
+
+                    span{
+                        font-size: 14px;
+                        font-weight: bold;
+
+                        &:before{
+                            width: 16px;
+                            height: 16px;
+                            margin-right: 14px;
+                        }
+
+                        &:after{
+                            width: 8px;
+                            height: 8px;
+                            top: 9px;
+                            left: 4px;
+                        }
+                    }
+                }
+            }
+        }
+
+        &-title {
+            color: rgba(0,0,0,.4);
+            text-transform: uppercase;
+            font-size: 13px;
+            padding-left: 28px;
+            letter-spacing: 0.5px;
+            display:inline-block;
+            vertical-align:middle;
+        }
+
+        &-items {
+            padding-left: 12px;
+
+            label {
+                cursor:pointer;
+                margin:0 3px;
+                padding: 10px 12px;
+                display: inline-block;
+
+                &.-correct{
+                    background-color: rgba(165,228,220,0.5);
+                }
+
+                &.-incorrect{
+                    background-color: rgba(255,41,41,0.6);
+                }
+
+                input {
+                    position: absolute;
+                    padding: 0;
+                    margin: 0;
+                    z-index: -999;
+                }
+
+                span {
+                    position:relative;
+                    display:inline-block;
+                    font-size:14px;
+                    font-weight:normal;
+                    line-height:21px;
+                    letter-spacing:0.5px;
+                    vertical-align:middle;
+                    color: rgba(0,0,0,.5);
+                    transition: color 0.1s;
+
+                    &:before {
+                        content:"\25CF";
+                        display:inline-block;
+                        width:16px;
+                        height:16px;
+                        margin:-3px 9px 0 0;
+
+                        color:transparent;
+                        line-height:1;
+                        vertical-align:middle;
+
+                        border:1px rgba(0,0,0,.15) solid;
+                        border-radius:100%;
+
+                        transition: all 0.1s;
+                    }
+
+                    &:after {
+                        content:"";
+                        display:block;
+                        position:absolute;
+                        width:8px;
+                        height:8px;
+                        top:7px;
+                        left:4px;
+                        background:$color-black;
+                        border-radius:100%;
+                        opacity:0;
+                        transform:scale(0);
+                        transition:all 0.2s;
+                    }
+
+                }
+
+                input:checked + span {
+                    color:$color-black;
+
+                    &:before {
+                        border-color:rgba(9,9,9,.2);
+                    }
+
+                    &:after {
+                        opacity:1;
+                        transform:scale(1);
+                    }
+                }
+            }
+        }
+
+        &:after {
+            content:"";
+            display:block;
+            clear:both;
+        }
+        &.-error {
+            outline: none;
+            border-bottom-color: rgba(red, 0.5);
+        }
+
+        &.-disabled {
+            color: rgba(255, 255, 255, 0.3);
+            border-bottom-color: rgba(221, 222, 224, 0.1);
+        }
+    }
+}
+
+fieldset{
+    &.dsx-form-input-container{
+        margin-top: -6px;
+    }
+}

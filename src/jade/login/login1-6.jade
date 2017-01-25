@@ -1,0 +1,31 @@
+extends /_includes/layout.jade
+
+block title
+    title DSX
+    meta(name="description", content="")
+
+    - LOGIN = true;
+
+block content
+    .dsx-wrap-outer
+        .dsx-wrap
+            .dsx-wrap-inner.-tertiary
+                .dsx-login
+                    .dsx-login-header
+                        .dsx-login-header-title
+                            .dsx-login-header-title-action
+                                a(href="")
+                                    h2 Restore password
+
+
+                    .dsx-login-email
+                        .dsx-form-input-container.-primary.-padded
+                            input.dsx-form-input.-transparent(placeholder="PASSWORD", type='password')
+
+                        .dsx-form-input-container.-primary.-padded
+                            input.dsx-form-input.-transparent(placeholder="CONFIRM PASSWORD", type='password')
+
+                    .dsx-login-action
+                        button.dsx-button.-secondary.-animated(type='button')
+                            span Update
+                            +svgsprite("chevron-right")

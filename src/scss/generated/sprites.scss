@@ -1,0 +1,58 @@
+.dsx-sprite {
+    display:inline-block;
+    background-image: url(../img/sprites/sprites.png);
+    background-repeat: no-repeat;
+
+        &.-payment-bank-sm {
+            background-position: -74px -191px;
+            width: 18px;
+            height: 15px;
+        }
+
+        &.-payment-bank {
+            background-position: -191px -49px;
+            width: 45px;
+            height: 37px;
+        }
+
+        &.-payment-btc {
+            background-position: -191px 0px;
+            width: 48px;
+            height: 48px;
+        }
+
+        &.-payment-card-sm {
+            background-position: -50px -191px;
+            width: 23px;
+            height: 18px;
+        }
+
+        &.-payment-card {
+            background-position: 0px -191px;
+            width: 49px;
+            height: 36px;
+        }
+
+        &.-payment-e {
+            background-position: -191px -87px;
+            width: 39px;
+            height: 42px;
+        }
+
+        &.-payment-ya {
+            background-position: -191px -130px;
+            width: 34px;
+            height: 45px;
+        }
+
+        &.-verify {
+            background-position: 0px 0px;
+            width: 190px;
+            height: 190px;
+        }
+
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            background-image: url(../img/sprites/sprites@2x.png);
+            background-size: 239px 227px;
+        }
+}

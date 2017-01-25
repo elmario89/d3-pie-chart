@@ -1,0 +1,214 @@
+.dsx-exchange-box{
+    width: 100%;
+    position: relative;
+    margin-bottom: 50px;
+
+    @media only screen and (min-width: $screen-sm){
+        display: table;
+    }
+
+    @media only screen and (min-width: $screen-lg){
+        margin-left: -60px;
+        max-width: 1060px;
+        display: table;
+        margin-bottom: 0;
+    }
+
+    &-switcher{
+        position: absolute;
+        top: 50%;
+        right: 24px;
+        width: 50px;
+        height: 50px;
+        margin-left: -25px;
+        margin-top: -37px;
+
+        @media only screen and (min-width: $screen-sm){
+            left: 50%;
+            right: initial;
+            margin-top: -25px;
+        }
+
+        a{
+            background-color: $color-secondary;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: inline-block;
+            position: relative;
+            color: $color-base;
+            z-index: 2;
+
+            transition: all 0.05s;
+
+            &:hover{
+                transform: scale(1.05);
+
+                svg{
+                    transform: scale(0.95);
+                }
+            }
+
+            svg{
+                top: 50%;
+                left: 50%;
+                font-size: 18px;
+                position: absolute;
+                margin-left: -6px;
+                margin-top: -8px;
+                z-index: 1;
+
+                transition: all 0.05s;
+            }
+        }
+    }
+
+    &-demo-message{
+        padding: 10px 13px;
+        background-color: $color-warning-secondary;
+        position: absolute;
+        left: 60px;
+        top: -18px;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 1.53px;
+        line-height: 15px;
+        font-size: 12px;
+        color: $color-base;
+    }
+
+    &-rate{
+        position: absolute;
+        right: 23px;
+        top: 25px;
+        z-index: 5;
+
+        &-icon{
+            margin-right: 16px;
+            font-size: 18px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        &-value{
+            opacity: 0.4;
+            letter-spacing: 0.44px;
+            color: $color-black;
+            line-height: 20px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+
+    &-left{
+        padding: 27px 24px 32px;
+        border-bottom: 1px solid #EDEDED;
+        background-color: $color-base;
+
+        @media only screen and (min-width: $screen-sm){
+            //border-right: 1px solid #EDEDED;
+            padding: 50px 79px 47px 60px;
+        }
+
+        @media only screen and (min-width: $screen-xl){
+            padding: 65px 165px 65px 60px;
+        }
+
+        &.-animate{
+            transform: translateX(100%);
+            background-color: $color-fill;
+        }
+    }
+
+    &-right{
+        padding: 27px 24px 55px;
+        position: relative;
+        background-color: $color-fill;
+
+        @media only screen and (min-width: $screen-sm){
+            padding: 50px 79px 47px 60px;
+        }
+
+        @media only screen and (min-width: $screen-xl){
+            padding: 65px 140px 65px 84px;
+        }
+
+        &.-animate{
+            transform: translateX(-100%);
+            background-color: $color-base;
+        }
+    }
+
+    &-left, &-right{
+
+        transition: transform 0.4s cubic-bezier(.71,.09,.3,.97), background-color 0.1s 0.5s;
+
+        @media only screen and (min-width: $screen-sm){
+            display: table-cell;
+            width: 50%;
+        }
+
+        &-currency-switcher{
+
+            @media only screen and (min-width: $screen-lg){
+                margin-bottom: 14px;
+            }
+        }
+
+        &-currency-input{
+            margin-bottom: 20px;
+        }
+
+        &-card-switcher{
+            margin-bottom: 16px;
+
+            @media only screen and (min-width: $screen-sm){
+                margin-bottom: 24px;
+            }
+
+            &-title{
+                color: $color-black;
+                opacity: 0.5;
+                letter-spacing: 0.5px;
+                margin-bottom: 7px;
+            }
+
+            &-dropdown{
+                i{
+                    margin-right: 9px;
+                }
+            }
+        }
+
+        &-fee{
+            letter-spacing: 0.5px;
+
+            &-title{
+                opacity: 0.5;
+            }
+
+            &-value{
+                color: rgba(0,0,0,.5);
+
+                @media only screen and (min-width: $screen-sm){
+                    color: $color-black;
+                }
+            }
+        }
+    }
+
+    &-action{
+        position: absolute;
+        bottom: -18px;
+        right: 24px;
+
+        @media only screen and (min-width: $screen-sm){
+            bottom: -27px;
+        }
+
+        @media only screen and (min-width: $screen-lg){
+            right: -15px;
+            bottom: 23px;
+        }
+    }
+}

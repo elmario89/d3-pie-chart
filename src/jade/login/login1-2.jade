@@ -1,0 +1,47 @@
+extends /_includes/layout.jade
+
+block title
+    title DSX
+    meta(name="description", content="")
+
+    - LOGIN = true;
+
+block content
+    .dsx-wrap-outer
+        .dsx-wrap
+            .dsx-wrap-inner.-tertiary
+                .dsx-login
+                    .dsx-login-header
+                        .dsx-login-header-subtitle
+                            a(href="")
+                                h2 Register
+                        .dsx-login-header-title.-left-margin
+                            a(href="")
+                                h1 Login
+
+
+                    .dsx-social
+                        ul.dsx-social-list
+                            li: a(href="")
+                                +svgsprite("facebook")
+                            li: a(href="")
+                                +svgsprite("twitter")
+                            li: a(href="")
+                                +svgsprite("epayments")
+                            li: a(href="")
+                                +svgsprite("google-plus")
+
+                    .dsx-login-email
+                        fieldset.dsx-form-input-container.-primary
+                            input.dsx-form-input.-transparent
+                            legend.dsx-form-input-container-label email
+
+                        .dsx-form-input-container.-primary.-padded
+                            input.dsx-form-input.-transparent(placeholder="PASSWORD", type='password')
+                            .dsx-form-input-container-message.-primary Restore
+
+
+                    .dsx-login-action
+                        button.dsx-button.-secondary.-animated(type='button')
+                            span Login
+                            +svgsprite("chevron-right")

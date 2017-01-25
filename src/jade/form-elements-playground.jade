@@ -1,0 +1,227 @@
+extends /_includes/layout.jade
+
+block title
+    title DSX
+    meta(name="description", content="")
+
+block content
+    .dsx-wrap-outer.-primary
+        .dsx-wrap
+            .dsx-wrap-inner.-primary
+                .playground-container
+                    div without fieldset
+                    br
+                    .dsx-form-input-container.-primary
+                        input.dsx-form-input.-transparent(placeholder="MOBILE PHONE")
+                    br
+                    .dsx-form-input-container.-secondary
+                        input.dsx-form-input.-transparent(placeholder="MOBILE PHONE")
+
+                    br
+                    div without fieldset with message
+                    br
+                    .dsx-form-input-container.-primary.-padded
+                        input.dsx-form-input.-transparent(placeholder="MOBILE PHONE")
+                        .dsx-form-input-container-message.-primary Restore
+                    br
+                    .dsx-form-input-container.-secondary
+                        input.dsx-form-input.-transparent(placeholder="MOBILE PHONE")
+                        .dsx-form-input-container-message.-secondary
+                            a Change
+
+                    br
+                    div without fieldset with message, type password
+                    br
+                    .dsx-form-input-container.-primary.-padded
+                        input.dsx-form-input.-transparent(placeholder="PASSWORD", type='password')
+                        .dsx-form-input-container-message.-primary Restore
+                    br
+                    .dsx-form-input-container.-secondary
+                        input.dsx-form-input.-transparent(placeholder="PASSWORD", type='password')
+                        .dsx-form-input-container-message.-secondary
+                            a Change
+
+                    br
+                    div without fieldset with checked icon
+                    br
+                    .dsx-form-input-container.-primary.-padded
+                        input.dsx-form-input.-transparent(placeholder="MOBILE PHONE")
+                        .dsx-form-input-container-message.-primary
+                            +svgsprite("check")
+                    br
+                    .dsx-form-input-container.-secondary
+                        input.dsx-form-input.-transparent(placeholder="MOBILE PHONE")
+                        .dsx-form-input-container-message.-secondary
+                            +svgsprite("check")
+
+                    br
+                    div without fieldset with checked icon, type password
+                    br
+                    .dsx-form-input-container.-primary.-padded
+                        input.dsx-form-input.-transparent(placeholder="PASSWORD", type='password')
+                        .dsx-form-input-container-message.-primary
+                            +svgsprite("check")
+                    br
+                    .dsx-form-input-container.-secondary
+                        input.dsx-form-input.-transparent(placeholder="PASSWORD", type='password')
+                        .dsx-form-input-container-message.-secondary
+                            +svgsprite("check")
+
+                    br
+                    div with fieldset
+                    br
+                    fieldset.dsx-form-input-container.-primary
+                        input.dsx-form-input.-transparent
+                        legend.dsx-form-input-container-label email
+                    br
+                    fieldset.dsx-form-input-container.-secondary
+                        input.dsx-form-input.-transparent
+                        legend.dsx-form-input-container-label email
+
+                    br
+                    div with fieldset, type password
+                    br
+                    fieldset.dsx-form-input-container.-primary
+                        input.dsx-form-input.-transparent(type='password')
+                        legend.dsx-form-input-container-label password
+                    br
+                    fieldset.dsx-form-input-container.-secondary
+                        input.dsx-form-input.-transparent(type='password')
+                        legend.dsx-form-input-container-label password
+
+                    br
+                    div with fieldset and message
+                    br
+                    fieldset.dsx-form-input-container.-primary.-padded
+                        input.dsx-form-input.-transparent(type='password')
+                        legend.dsx-form-input-container-label password
+                        .dsx-form-input-container-message.-primary Restore
+                    br
+                    fieldset.dsx-form-input-container.-secondary.-padded
+                        input.dsx-form-input.-transparent(type='password')
+                        legend.dsx-form-input-container-label password
+                        .dsx-form-input-container-message.-secondary
+                            a Change
+                    br
+
+                    br
+                    div with fieldset and link to verification, first disabled, second - after "change" was clicked
+                    br
+                    .dsx-form-input-container.-secondary.-padded.-disabled
+                        input.dsx-form-input.-transparent(placeholder="MOBILE PHONE", value="+44 323 232414", disabled="")
+                        .dsx-form-input-container-message.-secondary
+                            a Change
+
+                    br
+
+                    fieldset.dsx-form-input-container.-secondary.-padded
+                        input.dsx-form-input.-transparent(value="+44 323 232414")
+                        legend.dsx-form-input-container-label mobile phone
+                        .dsx-form-input-container-message.-secondary
+                            a.-success(data-toggle="modal" data-target="#phone") Verify
+                            a Cancel
+
+                    br
+                    div with fieldset and checked icon
+                    br
+                    fieldset.dsx-form-input-container.-primary.-padded
+                        input.dsx-form-input.-transparent
+                        legend.dsx-form-input-container-label email
+                        .dsx-form-input-container-message.-primary
+                            +svgsprite("check")
+                    br
+                    fieldset.dsx-form-input-container.-secondary.-padded
+                        input.dsx-form-input.-transparent
+                        legend.dsx-form-input-container-label email
+                        .dsx-form-input-container-message.-secondary
+                            +svgsprite("check")
+
+                    br
+                    div with fieldset and dropdown
+                    br
+
+                    .row
+                        .col-xs-6
+                            fieldset.dsx-form-input-container.-primary
+                                .dsx-dropdown.-tertiary
+                                    a.dsx-dropdown-toggle(data-toggle='dropdown', aria-haspopup='true', aria-expanded='true')
+                                        | Visa *0067
+                                        span.caret
+                                    ul.dsx-dropdown-menu
+                                        li
+                                            a.dsx-dropdown-menu-card(href='#') United Kingdom
+                                        li
+                                            a.dsx-dropdown-menu-card(href='#') Russia
+                                        li
+                                            a.dsx-dropdown-menu-card(href='#') Hungary lorem ipsum lorem lorem ipsum loremlorem lorem ipsum lorem
+                                        li
+                                            a.dsx-dropdown-menu-card(href='#') Netherlands
+                                        li
+                                            a.dsx-dropdown-menu-card(href='#') Spain
+                                legend.dsx-form-input-container-label citizenship
+
+                        .col-xs-6
+                            fieldset.dsx-form-input-container.-secondary
+                                .dsx-dropdown.-tertiary
+                                    a.dsx-dropdown-toggle(data-toggle='dropdown', aria-haspopup='true', aria-expanded='true')
+                                        | Visa *0067
+                                        span.caret
+                                    ul.dsx-dropdown-menu
+                                        li
+                                            a.dsx-dropdown-menu-card(href='#') United Kingdom
+                                        li
+                                            a.dsx-dropdown-menu-card(href='#') Russia
+                                        li
+                                            a.dsx-dropdown-menu-card(href='#') Hungary lorem ipsum lorem lorem ipsum loremlorem lorem ipsum lorem
+                                        li
+                                            a.dsx-dropdown-menu-card(href='#') Netherlands
+
+                                legend.dsx-form-input-container-label citizenship
+
+
+                    br
+                    div with fieldset and calendar
+                    br
+
+                    .row
+                        .col-xs-6
+                            fieldset.dsx-form-input-container.-primary
+                                a.dsx-form-input-container-calendar
+                                    +svgsprite("calendar")
+                                legend.dsx-form-input-container-label date of birth
+
+
+                        .col-xs-6
+                            fieldset.dsx-form-input-container.-secondary
+                                a.dsx-form-input-container-calendar
+                                    +svgsprite("calendar")
+                                legend.dsx-form-input-container-label date of birth
+
+                    br
+                    div disabled
+                    br
+                    .dsx-form-input-container.-secondary.-padded.-disabled
+                        input.dsx-form-input.-transparent(placeholder="MOBILE PHONE", value="+44 323 232414", disabled="")
+                        .dsx-form-input-container-message.-secondary
+                            a Change
+
+                    br
+
+                    fieldset.dsx-form-input-container.-secondary.-padded.-negative.-disabled
+                        input.dsx-form-input.-transparent(value="milsnorris@gmail.com", disabled="")
+                        legend.dsx-form-input-container-label password
+                        .dsx-form-input-container-message.-secondary
+                            a Change
+
+                    br
+                    div radio
+                    br
+                    .dsx-form-radio
+                        .dsx-form-radio-title Gender
+                        .dsx-form-radio-items
+                            label
+                                input(type="radio", name="question2", value="1")
+                                span Male
+                            label
+                                input(type="radio", name="question2", value="2")
+                                span Female
