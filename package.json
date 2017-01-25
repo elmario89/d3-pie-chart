@@ -49,5 +49,10 @@
     "merge-stream": "1.x",
     "uglify-save-license": "0.x",
     "vinyl-buffer": "1.x"
+  },
+  "scripts": {
+    "prestart": "npm install",
+    "postinstall": "bower install",
+    "start": "gulp serve"
   }
 }
