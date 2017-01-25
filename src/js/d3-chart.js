@@ -1,5 +1,6 @@
 $(function() {
 
+    var svg = d3.select("#currency-pie-chart").append("svg").append("g");
 
     var drawPie = function(resizedWidth, resizedHeight){
         var width = resizedWidth,
@@ -35,12 +36,12 @@ $(function() {
             .value(function(d) { return d.population; });
 
         //clear svg after resize and draw new
-        d3.selectAll("svg").remove();
+        //d3.selectAll("svg").remove();
 
-        var svg = d3.select("#currency-pie-chart").append("svg")
+        var svg = d3.select("#currency-pie-chart").select("svg")
             .attr("width", width)
             .attr("height", height)
-            .append("g")
+            .select("g")
             .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
         d3.csv("/data/data.csv", type, function(error, data) {
